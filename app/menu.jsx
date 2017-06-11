@@ -12,21 +12,21 @@ import Contribute from './components/docs/pages/others/Contribute';
 import Github from './components/docs/pages/others/Github';
 
 const menu = {
-  title: 'REACT SPA Boilerplate',
-  description: 'A React SPA boilerplate for open source projects',
+  title: 'Hi! I\'m Seth',
+  description: 'My Portfolio',
   homeLink: '/',
-  docsLink: '/docs/installation',
+  docsLink: '/about',
   github: {
-    user: 'lucasbassetti',
-    repository: 'react-spa-boilerplate',
+    user: 'lackdaz',
+    repository: 'lackdaz.github.io',
   },
   sections: [
     {
-      title: 'Intro',
+      title: 'About Me',
       icon: 'fa fa-arrow-right',
       links: [
         {
-          href: '/docs/installation',
+          href: '/about',
           title: 'Installation',
           component: <Installation />,
         },
