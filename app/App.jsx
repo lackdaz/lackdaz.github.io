@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import Home from './components/home/Home';
 import Docs from './components/docs/Docs';
 
-import ChatBot from 'react-simple-chatbot';
-
-
 const $ = require('jquery');
 
 class App extends Component {

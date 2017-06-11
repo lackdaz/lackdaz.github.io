@@ -16,7 +16,8 @@ a {
 }
 
 a:hover {
-  opacity: .7
+  /*opacity: .7*/
+  opacity: 1.0;
 }
 
 ul {
