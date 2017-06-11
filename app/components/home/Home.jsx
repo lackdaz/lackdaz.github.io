@@ -33,7 +33,7 @@ const Home = (props) => {
           onClick={() => props.handleLink(docsLink)}
         >
           <i className="fa fa-book" />
-          Enter
+          Let me give you a tour
         </a>
       </p>
     </div>

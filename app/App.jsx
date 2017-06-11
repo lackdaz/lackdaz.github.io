@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import Home from './components/home/Home';
 import Docs from './components/docs/Docs';
 
+import ChatBot from 'react-simple-chatbot';
+
+
 const $ = require('jquery');
 
 class App extends Component {
@@ -40,11 +43,11 @@ class App extends Component {
     const { link } = this.state;
     console.log(link)
     // If its true, landing page will trigger
-    
+
     // const isHome = link.indexOf('/docs') < 0;
     // console.log(link.indexOf('/docs'))
 
-    const isHome = link.length <= 0;
+    const isHome = link.length <= 1;
     console.log(link.length)
 
     return isHome ? (

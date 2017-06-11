@@ -72,6 +72,7 @@
     "lodash": "^4.17.4",
     "prop-types": "^15.5.8",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "react-simple-chatbot": "^0.1.10"
   }
 }
