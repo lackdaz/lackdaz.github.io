@@ -14,6 +14,7 @@ import ChatIcon from './ChatIcon';
 import CloseIcon from './CloseIcon';
 import Footer from './Footer';
 import Input from './Input';
+import menu from '../../menu';
 
 class ChatBot extends Component {
   /* istanbul ignore next */
@@ -27,7 +28,7 @@ class ChatBot extends Component {
       previousStep: {},
       steps: {},
       disabled: true,
-      opened: !props.floating,
+      opened: props.opened || !props.floating,
       inputValue: '',
       inputInvalid: false,
       defaulBotSettings: {},
@@ -97,6 +98,14 @@ class ChatBot extends Component {
     /* istanbul ignore next */
     if (chatbotContent) {
       chatbotContent.addEventListener('DOMNodeInserted', this.onNodeInserted);
+    }
+  }
+
+  componentWillUpdate(nextProps, nextState) {
+    const { opened } = nextProps;
+
+    if (opened !== undefined && opened !== nextState.opened) {
+      this.setState({ opened });
     }
   }
 
@@ -341,6 +350,22 @@ class ChatBot extends Component {
     return false;
   }
 
+  closeChatBot({ opened }) {
+    if (this.props.toggleFloating) {
+      this.props.toggleFloating({ opened });
+    } else {
+      this.setState({ opened });
+    }
+  }
+
+  openChatBot({ opened }) {
+    if (this.props.toggleFloating) {
+      this.props.toggleFloating({ opened });
+    } else {
+      this.setState({ opened });
+    }
+  }
+
   renderStep(step, index) {
     const { renderedSteps, previousSteps } = this.state;
     const {
@@ -443,7 +468,7 @@ class ChatBot extends Component {
           floating &&
           <HeaderIcon
             className="rsc-header-close-button"
-            onClick={() => this.setState({ opened: false })}
+            onClick={() => this.closeChatBot({ opened: false })}
           >
             <CloseIcon />
           </HeaderIcon>
@@ -460,7 +485,7 @@ class ChatBot extends Component {
             headerBgColor={headerBgColor}
             headerFontColor={headerFontColor}
             opened={opened}
-            onClick={() => this.setState({ opened: true })}
+            onClick={() => this.openChatBot({ opened: true })}
           >
             <ChatIcon />
           </FloatButton>
@@ -474,7 +499,6 @@ class ChatBot extends Component {
           {!hideHeader && header}
           <Content
             className="rsc-content"
-            ref={(content) => { this.rscContent = content; }}
             floating={floating}
             style={contentStyle}
           >
@@ -488,7 +512,6 @@ class ChatBot extends Component {
               type="textarea"
               style={inputStyle}
               className="rsc-input"
-              ref={(input) => { this.rscInput = input; }}
               placeholder="Type the message ..."
               onKeyPress={this.handleKeyPress}
               onChange={this.onValueChange}
@@ -513,6 +536,8 @@ ChatBot.propTypes = {
   hideBotAvatar: PropTypes.bool,
   hideUserAvatar: PropTypes.bool,
   floating: PropTypes.bool,
+  opened: PropTypes.bool,
+  toggleFloating: PropTypes.func,
   style: PropTypes.object,
   contentStyle: PropTypes.object,
   footerStyle: PropTypes.object,
@@ -545,6 +570,8 @@ ChatBot.defaultProps = {
   hideBotAvatar: false,
   hideUserAvatar: false,
   floating: false,
+  opened: undefined,
+  toggleFloating: undefined,
   style: {},
   contentStyle: {},
   footerStyle: {},

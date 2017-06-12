@@ -36,7 +36,7 @@ const menu = {
           component: <About />,
         },
         {
-          href: '/docs/hello-world',
+          href: '/causes',
           title: 'Hello World',
           component: <HelloWorld />,
         },
@@ -47,34 +47,34 @@ const menu = {
       icon: 'fa fa-code',
       links: [
         {
-          href: '/docs/project1',
+          href: '/portfolio/project1',
           title: 'Save the Pangolin',
           component: <Project1 />,
         },
         {
-          href: '/docs/project2',
+          href: '/portfolio/project2',
           title: 'Thingies',
           component: <Project2 />,
         },
         {
-          href: '/docs/project3',
+          href: '/portfolio/project3',
           title: 'Food Delivery',
           component: <Project3 />,
         },
         {
-          href: '/docs/project4',
+          href: '/portfolio/project4',
           title: 'Sentiment Chatbot',
           component: <Project4 />,
         },
       ],
     },
     {
-      title: 'I like... ',
+      title: 'Skills',
       icon: 'fa fa-rocket',
       links: [
         {
-          href: '/docs/component1',
-          title: 'Component 1',
+          href: '/skills',
+          title: 'Coding',
           description: 'Description of component 1',
           component: <Component1 />,
         },
@@ -85,7 +85,7 @@ const menu = {
       icon: 'fa fa-envelope',
       links: [
         {
-          href: '/docs/contribute',
+          href: '/engage',
           title: 'How to Contribute',
           component: <Contribute />,
         },
