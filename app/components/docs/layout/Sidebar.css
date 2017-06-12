@@ -63,7 +63,7 @@
 	text-decoration: none;
 	margin: 0 auto 5px auto;
 	/*padding: 10px 0 10px 5px;*/
-  padding: 5px 0 5px 5px;
+  padding: 5px 0 5px 20px;
 	text-align: left;
   color: rgba(255, 255, 255, 0.6);
 	/*color:  #4a4a4a;*/
@@ -101,7 +101,7 @@
 }
 
 .sidebar-links div.selected ul.sub-links {
-	max-height: 150px;
+	max-height: 30vh;
 	padding: 0px 0 0px 60px;
 }
 
