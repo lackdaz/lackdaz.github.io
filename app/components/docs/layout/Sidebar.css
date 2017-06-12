@@ -25,14 +25,26 @@
 }
 
 .sidebar .sidebar-header {
-  height: 56px;
+  height: auto;
+  text-align: center;
 }
 
 .sidebar .sidebar-header .logo {
   display: inline-block;
-  padding: 16px;
+  /*padding: 16px;*/
   /*color: #4a4a4a;*/
   color: rgba(255, 255, 255, 1);
+}
+
+.sidebar .sidebar-header .tagline {
+  display: inline-block;
+  padding: 16px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.sidebar-logo-container {
+  max-width: 100%;
+  padding: 24px;
 }
 
 .sidebar .sidebar-close-button {

@@ -33,22 +33,45 @@ const Docs = (props) => {
               <ChatBot
                 floating={true}
                 handleLink={props.handleLink}
+                botAvatar={'avatar.png'}
                 steps={[
                   {
                     id: '1',
-                    message: 'What is your name?',
+                    message: 'Hello visitor! Thank you for taking an interest in my portfolio',
                     trigger: '2'
                   },
                   {
                     id: '2',
-                    user: true,
+                    message: 'Would you like me to give you a tour?',
                     trigger: '3'
                   },
                   {
                     id: '3',
-                    message: 'Hi {previousValue}, nice to meet you!',
+                    options: [
+                      { value: 'yes', label: 'Yes', trigger: 'tour' },
+                      { value: 'no', label: 'No', trigger: 'menu' },
+                    ],
+                  },
+                  {
+                    id: 'menu',
+                    message: 'What would you like to know about me?',
+                    trigger: 'menu-next'
+                  },
+                  {
+                    id: 'menu-next',
+                    options: [
+                      { value: 'About', label: 'Story', trigger: 'story' },
+                      { value: 'Portfolio', label: 'Portfolio', trigger: 'portfolio' },
+                      { value: 'skills', label: 'Skills', trigger: 'skills' },
+                      { value: 'contact', label: 'Contact', trigger: 'contact' },
+                    ],
+                  },
+                  {
+                    id: 'end',
+                    message: 'Thank you so much for your time',
                     end: true
-                  }
+                  },
+
                 ]}
 />
             </div>

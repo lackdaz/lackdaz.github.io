@@ -17,8 +17,8 @@ import Github from './components/docs/pages/others/Github';
 
 
 const menu = {
-  title: 'Hi! I\'m Seth',
-  description: 'My Portfolio',
+  title: 'Hello! I\'m Seth',
+  description: 'A web developer, maker and facilitator living in Singapore',
   homeLink: '/',
   docsLink: '/about',
   github: {
@@ -32,7 +32,7 @@ const menu = {
       links: [
         {
           href: '/about',
-          title: 'About',
+          title: 'About Me',
           component: <About />,
         },
         {

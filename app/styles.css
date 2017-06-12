@@ -75,3 +75,9 @@ code {
 object {
   display: none;
 }
+
+img {
+  max-width: 100%;
+  height: auto !important;
+  border-bottom: 6px solid rgba(255, 255, 255, .5);
+}

@@ -531,10 +531,12 @@ ChatBot.propTypes = {
   userDelay: PropTypes.number,
   userFontColor: PropTypes.string,
   handleEnd: PropTypes.func,
+  handleLink: PropTypes.func,
 };
 
 ChatBot.defaultProps = {
   handleEnd: undefined,
+  handleLink: undefined,
   headerComponent: undefined,
   headerBgColor: '#6e48aa',
   headerFontColor: '#fff',
