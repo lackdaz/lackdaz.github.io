@@ -1,6 +1,19 @@
 main {
   margin-left: 25vw;
-  padding: 24px;
+  padding: 10vh 10vw;
+  background-color: #F5F5F5;
+  height: 100vh;
+}
+
+main .main-container {
+  padding: 5vmin;
+  background-color: #FFFFFF;
+  text-align: justify;
+}
+
+p {
+  font-size: 24px;
+  line-height: 1.5;
 }
 
 @media screen and (max-width: 765px) {

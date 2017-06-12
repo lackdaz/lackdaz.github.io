@@ -32,7 +32,8 @@ const menu = {
       links: [
         {
           href: '/about',
-          title: 'About Me',
+          title: 'My Story',
+          description: 'A web developer, maker and facilitator living in Singapore',
           component: <About />,
         },
         {

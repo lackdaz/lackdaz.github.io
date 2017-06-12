@@ -24,7 +24,7 @@ const Docs = (props) => {
       <main>
         {
           link ? (
-            <div>
+            <div className='main-container'>
               <Header
                 title={link.title}
                 description={link.description}
