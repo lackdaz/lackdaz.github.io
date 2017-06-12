@@ -33,7 +33,7 @@ const menu = {
         {
           href: '/about',
           title: 'My Story',
-          description: 'A web developer, maker and facilitator living in Singapore',
+          description: '"What I do not create, I do not yet understand" - Richard Feynman',
           component: <About />,
         },
         {
@@ -75,8 +75,8 @@ const menu = {
       links: [
         {
           href: '/skills',
-          title: 'Coding',
-          description: 'Description of component 1',
+          title: 'My Chops',
+          description: 'I got good at...',
           component: <Component1 />,
         },
       ],

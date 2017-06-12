@@ -40,13 +40,14 @@ export default menu;
 `;
 
 const HelloWorld = () => (
-  <div className="docs-hello-world">
-    <p>Access the <code>menu.jsx</code> file and edit to your preferences</p>
-    <pre>
-      <code className="jsx">
-        { helloWorldCode }
-      </code>
-    </pre>
+  <div className='docs-installation'>
+    <p>
+      Over the years, both work and leisure has brought me on many overseas adventures. I've backpacked across Central and Eastern Europe on a number of occasions, worked in Laos, stayed for an extended period of time in Utrecht. During a week-long flight delay while on a work trip to China, I programmed a POS / SOA automation script with VBA.
+
+      After meeting my partner Cleavan, we celebrated our graduation with a road trip from D.C. to Key West (2,414 miles round-trip) and I now spend my December breaks visiting the folks in Oregon, USA.
+
+      After leaving my last job,
+    </p>
   </div>
 );
 
