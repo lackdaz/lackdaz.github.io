@@ -91,6 +91,10 @@ class Sidebar extends Component {
           onClick={() => this.toggleSidebar()}
         />
         <div className={`sidebar ${opened ? 'opened' : ''}`}>
+          <i
+            className="sidebar-close-button fa fa-close"
+            onClick={() => this.toggleSidebar()}
+          />
           <div className="sidebar-logo-container">
             <a
               onClick={() => this.props.handleLink(menu.homeLink)}
@@ -106,17 +110,18 @@ class Sidebar extends Component {
               className="logo"
             >
               <div>
-                {menu.title}
+                <h1>
+                  {menu.title}
+                </h1>
               </div>
               <div className="tagline">
-                {menu.description}
+                <h2>
+                  {menu.description}
+                </h2>
               </div>
             </a>
 
-            <i
-              className="sidebar-close-button fa fa-rocket"
-              onClick={() => this.toggleSidebar()}
-            />
+
           </div>
 
           <div className="sidebar-links">
