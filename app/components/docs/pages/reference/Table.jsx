@@ -1,6 +1,6 @@
 import React from 'react';
 
-require('./Component1.css');
+require('./Skills.css');
 
 const properties = [
   {
@@ -17,7 +17,7 @@ const properties = [
   },
 ];
 
-const Component1 = () => (
+const Skills = () => (
   <div className="docs-component-1">
     <h3>Properties</h3>
     <table>
@@ -48,4 +48,4 @@ const Component1 = () => (
   </div>
 );
 
-export default Component1;
+export default Skills;

@@ -9,7 +9,7 @@ import Project3 from './components/docs/pages/examples/Project3';
 import Project4 from './components/docs/pages/examples/Project4';
 
 // API Referece
-import Component1 from './components/docs/pages/reference/Component1';
+import Skills from './components/docs/pages/reference/Skills';
 // Others
 import Contribute from './components/docs/pages/others/Contribute';
 import Github from './components/docs/pages/others/Github';
@@ -77,7 +77,7 @@ const menu = {
           href: '/skills',
           title: 'My Chops',
           description: 'I got good at...',
-          component: <Component1 />,
+          component: <Skills />,
         },
       ],
     },

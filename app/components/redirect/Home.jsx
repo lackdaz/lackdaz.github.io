@@ -1,12 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import menu from '../../menu';
-
-require('./Home.css');
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ChatBot, { Loading } from 'react-simple-chatbot';
+
+require('./Home.css');
 
 class DBPedia extends Component {
   constructor(props) {
@@ -19,6 +16,7 @@ class DBPedia extends Component {
     };
 
     this.triggetNext = this.triggetNext.bind(this);
+    this.handleLink = this.handleLink.bind(this)
   }
 
   componentWillMount() {
@@ -26,15 +24,15 @@ class DBPedia extends Component {
     const { steps } = this.props;
     const search = steps.search.value;
     const endpoint = encodeURI('https://dbpedia.org');
-    const query = encodeURI(`
-      select * where {
-      ?x rdfs:label "${search}"@en .
-      ?x rdfs:comment ?comment .
-      FILTER (lang(?comment) = 'en')
-      } LIMIT 100
-    `);
+    // const query = encodeURI(`
+    //   select * where {
+    //   ?x rdfs:label "${search}"@en .
+    //   ?x rdfs:comment ?comment .
+    //   FILTER (lang(?comment) = 'en')
+    //   } LIMIT 100
+    // `);
 
-    const queryUrl = `https://dbpedia.org/sparql/?default-graph-uri=${endpoint}&query=${query}&format=json`;
+    // const queryUrl = `https://dbpedia.org/sparql/?default-graph-uri=${endpoint}&query=${query}&format=json`;
 
     const xhr = new XMLHttpRequest();
 
@@ -68,24 +66,6 @@ class DBPedia extends Component {
     return (
       <div className="dbpedia">
         { loading ? <Loading /> : result }
-        {
-          !loading &&
-          <div
-            style={{
-              textAlign: 'center',
-              marginTop: 20,
-            }}
-          >
-            {
-              !trigger &&
-              <button
-                onClick={() => this.triggetNext()}
-              >
-                Search Again
-              </button>
-            }
-          </div>
-        }
       </div>
     );
   }
@@ -94,34 +74,13 @@ class DBPedia extends Component {
 DBPedia.propTypes = {
   steps: PropTypes.object,
   triggerNextStep: PropTypes.func,
+  handleLink: PropTypes.func,
 };
 
 DBPedia.defaultProps = {
   steps: undefined,
   triggerNextStep: undefined,
+  handleLink: undefined,
 };
-
-const ExampleDBPedia = () => (
-  <ChatBot
-    steps={[
-      {
-        id: '1',
-        message: 'Type something to search on Wikipédia. (Ex.: Brazil)',
-        trigger: 'search',
-      },
-      {
-        id: 'search',
-        user: true,
-        trigger: '3',
-      },
-      {
-        id: '3',
-        component: <DBPedia />,
-        waitAction: true,
-        trigger: '1',
-      },
-    ]}
-  />
-);
 
 export default ExampleDBPedia;
