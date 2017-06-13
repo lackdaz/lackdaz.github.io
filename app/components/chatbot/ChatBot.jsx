@@ -14,7 +14,6 @@ import ChatIcon from './ChatIcon';
 import CloseIcon from './CloseIcon';
 import Footer from './Footer';
 import Input from './Input';
-import menu from '../../menu';
 
 class ChatBot extends Component {
   /* istanbul ignore next */

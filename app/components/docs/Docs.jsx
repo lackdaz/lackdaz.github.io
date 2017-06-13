@@ -5,6 +5,9 @@ import Sidebar from './layout/Sidebar'
 import ChatBot from '../chatbot/ChatBot'
 import menu from '../../menu'
 
+// custom chatbot components
+import Summary from '../redirect/skillsRoute'
+
 require('./Docs.css')
 
 const routes = []
@@ -55,16 +58,32 @@ const Docs = (props) => {
                   {
                     id: 'menu',
                     message: 'What would you like to know about me?',
-                    trigger: 'menu-next'
+                    trigger: 'menuInput'
                   },
                   {
-                    id: 'menu-next',
+                    id: 'menuInput',
                     options: [
-                      { value: 'About', label: 'Story', trigger: 'story' },
-                      { value: 'Portfolio', label: 'Portfolio', trigger: 'portfolio' },
-                      { value: 'skills', label: 'Skills', trigger: 'skills' },
+                      { value: '/about', label: 'Story', trigger: 'story' },
+                      { value: '/portfolio/project1', label: 'Portfolio', trigger: 'portfolio' },
+                      { value: '/skills', label: 'Skills', trigger: 'skills' },
                       { value: 'contact', label: 'Contact', trigger: 'contact' },
                     ],
+                  },
+                  {
+                    id: 'story',
+                    component: <skillsRoute />,
+                    asMessage: false,
+                    trigger: 'story1'
+                  },
+                  {
+                    id: 'story1',
+                    message: 'Once upon a time',
+                    trigger: 'story2'
+                  },
+                  {
+                    id: 'story2',
+                    message: 'In a land far, far away',
+                    trigger: 'end'
                   },
                   {
                     id: 'end',

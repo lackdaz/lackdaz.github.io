@@ -1,5 +1,6 @@
 import React from 'react';
 // Intro
+import Intro from './components/docs/pages/intro/Intro';
 import About from './components/docs/pages/intro/About';
 import HelloWorld from './components/docs/pages/intro/HelloWorld';
 // Examples
@@ -30,6 +31,12 @@ const menu = {
       title: 'About Me',
       icon: 'fa fa-asterisk',
       links: [
+        {
+          href: '/intro',
+          title: 'Introduction',
+          description: '"What I do not create, I do not yet understand" - Richard Feynman',
+          component: <Intro />,
+        },
         {
           href: '/about',
           title: 'My Story',
