@@ -100,7 +100,7 @@ class Sidebar extends Component {
               onClick={() => this.props.handleLink(menu.homeLink)}
               className="logo"
             >
-              <img src={'profile-prisma.png'}></img>
+              <img src={'./profile-prisma.png'}></img>
             </a>
           </div>
 

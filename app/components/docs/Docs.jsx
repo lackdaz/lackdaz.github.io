@@ -33,7 +33,7 @@ const Docs = (props) => {
               <ChatBot
                 floating={true}
                 handleLink={props.handleLink}
-                botAvatar={'avatar.png'}
+                botAvatar={'./avatar.png'}
                 steps={[
                   {
                     id: '1',
