@@ -23,10 +23,16 @@ export default class SkillsRoute extends Component {
 
     console.log(link)
 
-    this.props.handleLink(link)
-    self.setState({ loading: false})
-    this.props.triggerNextStep()
-    
+    this.props.handleLink(link).then(success => {
+      self.setState({ loading: false})
+    })
+    .then(success =>{
+      this.props.triggerNextStep()
+    })
+    .catch(reason => {
+    })
+
+
     // .then(success => {
     //   self.setState({ loading: false}, () => {
     //     this.props.triggerNextStep()
