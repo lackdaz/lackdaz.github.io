@@ -272,69 +272,68 @@ const designSkills = [
 ]
 
 const Skills = () => (
-  // <div className='skills-container'>
-  //   <div className='skills-current'>
-  //     <h3>I'm now learning</h3>
-  //     <ul className='horizontal-list'>
-  //       {
-  //         current.map((prop) => {
-  //           const { name, type, icon, href, defaultValue, description } = prop
-  //           return (
-  //             <li key={prop.name}>
-  //               <div className='blocks'>
-  //                 <a href={href}>
-  //                   { {icon}.length > 1 ? <i className={icon} /> : <img src={`${name}.png`} /> }
-  //                   <div className='header'>
-  //                     <p>{name}</p>
-  //                   </div>
-  //                 </a>
-  //               </div>
-  //             </li>
-  //           )
-  //         })
-  //       }
-  //     </ul>
-  //   </div>
-  //   <div className='skills-dev'>
-  //     <h3>Development</h3>
-  //     <ul className='horizontal-list'>
-  //       {
-  //         devSkills.map((prop) => {
-  //           const { name, type, icon, href, defaultValue, description } = prop
-  //           return (
-  //             <li key={prop.name}>
-  //               <div>
-  //                 <a href={href}>
-  //                   <i className={icon} />
-  //                   <p>{name}</p>
-  //                 </a>
-  //               </div>
-  //             </li>
-  //           )
-  //         })
-  //       }
-  //     </ul>
-  //   </div>
-  //   <div className='skills-design'>
-  //     <h3>Design</h3>
-  //     <ul className='horizontal-list'>
-  //       {
-  //         designSkills.map((prop) => {
-  //           const { name, type, icon, href, defaultValue, description } = prop
-  //           return (
-  //             <li key={prop.name}>
-  //               <div>
-  //                 <i className={icon} />
-  //                 <p>{name}</p>
-  //               </div>
-  //             </li>
-  //           )
-  //         })
-  //       }
-  //     </ul>
-  //   </div>
-  // </div>
-<div></div>
+  <div className='skills-container'>
+    <div className='skills-current'>
+      <h3>I'm now learning</h3>
+      <ul className='horizontal-list'>
+        {
+          current.map((prop) => {
+            const { name, type, icon, href, defaultValue, description } = prop
+            return (
+              <li key={prop.name}>
+                <div className='blocks'>
+                  <a href={href}>
+                    { {icon}.length > 1 ? <i className={icon} /> : <img src={`${name}.png`} /> }
+                    <div className='header'>
+                      <p>{name}</p>
+                    </div>
+                  </a>
+                </div>
+              </li>
+            )
+          })
+        }
+      </ul>
+    </div>
+    <div className='skills-dev'>
+      <h3>Development</h3>
+      <ul className='horizontal-list'>
+        {
+          devSkills.map((prop) => {
+            const { name, type, icon, href, defaultValue, description } = prop
+            return (
+              <li key={prop.name}>
+                <div>
+                  <a href={href}>
+                    <i className={icon} />
+                    <p>{name}</p>
+                  </a>
+                </div>
+              </li>
+            )
+          })
+        }
+      </ul>
+    </div>
+    <div className='skills-design'>
+      <h3>Design</h3>
+      <ul className='horizontal-list'>
+        {
+          designSkills.map((prop) => {
+            const { name, type, icon, href, defaultValue, description } = prop
+            return (
+              <li key={prop.name}>
+                <div>
+                  <i className={icon} />
+                  <p>{name}</p>
+                </div>
+              </li>
+            )
+          })
+        }
+      </ul>
+    </div>
+  </div>
 )
 
 export default Skills
