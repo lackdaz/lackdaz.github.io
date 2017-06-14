@@ -36,11 +36,10 @@
   font-size: 2.5vmin;
 }
 
-.skills-current .horizontal-list .blocks {
-  max-width: 150px;
+.skills-current .horizontal-list li {
+  max-width: 150px
 }
 
-.skills-current .horizontal-list .header{
-  width: 100%;
-  text-align: center;
+.skills-current .horizontal-list li p{
+  font-size: 2em;
 }

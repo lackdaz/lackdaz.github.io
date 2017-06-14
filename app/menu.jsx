@@ -18,7 +18,7 @@ import Github from './components/docs/pages/others/Github';
 
 
 const menu = {
-  title: 'Hello! I\'m David',
+  title: 'Hello! I\'m Seth',
   description: 'A web developer, maker and facilitator living in Singapore',
   homeLink: '/',
   docsLink: '/about',
@@ -82,8 +82,8 @@ const menu = {
       links: [
         {
           href: '/skills',
-          title: 'My Chops',
-          description: 'I got good at...',
+          title: 'Coding & Creative',
+          description: 'My chops',
           component: <Skills />,
         },
       ],
