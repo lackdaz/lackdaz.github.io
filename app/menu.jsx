@@ -105,6 +105,28 @@ const menu = {
       ],
     },
   ],
+  ctas: [
+    {
+      title: 'Linkedin',
+      icon: 'fa fa-linkedin-square',
+      href: 'https://www.linkedin.com/in/sethloh/'
+    },
+    {
+      title: 'GitHub',
+      icon: 'fa fa-github-square',
+      href: 'https://github.com/lackdaz'
+    },
+    {
+      title: 'facebook',
+      icon: 'fa fa-facebook-square',
+      href: 'https://www.facebook.com/lackdaz'
+    },
+    {
+      title: 'mail',
+      icon: 'fa fa-envelope',
+      href: 'mailto:lackdaz@gmail.com?Subject=Hello%20Seth'
+    },
+  ],
 };
 
 export default menu;

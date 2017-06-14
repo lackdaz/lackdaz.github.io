@@ -152,6 +152,18 @@
 	color: #86be2e;
 }
 
+.sidebar-ctas {
+  max-width: 100%;
+  list-style: none;
+  text-align: center;
+}
+
+
+.sidebar-ctas li {
+  display: inline-block;
+  padding: 0 0.75vw;
+}
+
 @media screen and (max-width: 765px) {
   .sidebar-container {
     height: 56px;
