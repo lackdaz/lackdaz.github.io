@@ -18,7 +18,7 @@ import Github from './components/docs/pages/others/Github';
 
 
 const menu = {
-  title: 'Hello! I\'m Seth',
+  title: 'Hello! I\'m David',
   description: 'A web developer, maker and facilitator living in Singapore',
   homeLink: '/',
   docsLink: '/about',
