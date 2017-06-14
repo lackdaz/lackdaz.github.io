@@ -281,12 +281,12 @@ const Skills = () => (
             const { name, type, icon, href, defaultValue, description } = prop
             return (
               <li key={prop.name}>
-                <div>
+                <div className='blocks'>
                   <a href={href}>
-                    { {icon}.length > 1 ? <i className={icon} /> : <i src={`${name}.png`} /> }
-                    <pre>{icon}</pre>
-                    <pre>{`${name}.png`}</pre>
-                    <p>{name}</p>
+                    { {icon}.length > 1 ? <i className={icon} /> : <img src={`${name}.png`} /> }
+                    <div className='header'>
+                      <p>{name}</p>
+                    </div>
                   </a>
                 </div>
               </li>

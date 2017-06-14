@@ -20,7 +20,6 @@
 	list-style: none;
 	padding: 20px;
   margin: 0 auto;
-  text-align: center;
 }
 
 .horizontal-list li {
@@ -33,6 +32,15 @@
 }
 
 .horizontal-list li p {
-  max-width: 100px;
-  font-size: 1.5vmin;
+  max-width: 100%;
+  font-size: 2.5vmin;
+}
+
+.skills-current .horizontal-list .blocks {
+  max-width: 150px;
+}
+
+.skills-current .horizontal-list .header{
+  width: 100%;
+  text-align: center;
 }
