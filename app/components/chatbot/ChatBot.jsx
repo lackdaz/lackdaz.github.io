@@ -374,6 +374,7 @@ class ChatBot extends Component {
       customDelay,
       hideBotAvatar,
       hideUserAvatar,
+      handleLink
     } = this.props;
     const { options, component, asMessage } = step;
     const steps = {};
@@ -400,6 +401,7 @@ class ChatBot extends Component {
           style={customStyle}
           previousStep={previousStep}
           triggerNextStep={this.triggerNextStep}
+          handleLink={handleLink}
         />
       );
     }
@@ -422,6 +424,7 @@ class ChatBot extends Component {
         steps={steps}
         previousValue={previousStep.value}
         triggerNextStep={this.triggerNextStep}
+        handleLink={handleLink}
         avatarStyle={avatarStyle}
         bubbleStyle={bubbleStyle}
         hideBotAvatar={hideBotAvatar}

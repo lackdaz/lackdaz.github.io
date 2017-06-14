@@ -45,7 +45,7 @@ class App extends Component {
     // console.log(link.indexOf('/docs'))
 
     const isHome = link.length <= 1;
-    console.log(link.length)
+    // console.log(link.length)
 
     return isHome ? (
       <Home

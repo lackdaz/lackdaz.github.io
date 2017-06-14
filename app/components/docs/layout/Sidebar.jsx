@@ -43,6 +43,7 @@ class Sidebar extends Component {
 
       if (href !== '#') {
         links.removeClass('selected-link');
+        console.log(this)
         $(this).addClass('selected-link');
         self.setState({ opened: false });
       }

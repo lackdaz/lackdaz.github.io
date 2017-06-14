@@ -5,7 +5,7 @@ import ChatBot, { Loading } from 'react-simple-chatbot'
 
 require('./Home.css')
 
-export default class SkillsRoute extends Component {
+export default class skillsRoute extends Component {
   constructor (props) {
     super(props)
 
@@ -14,6 +14,9 @@ export default class SkillsRoute extends Component {
       trigger: false,
       result: ''
     }
+
+    this.triggetNext = this.triggetNext.bind(this)
+    this.handleLink = this.handleLink.bind(this)
   }
 
   componentWillMount () {
@@ -21,20 +24,15 @@ export default class SkillsRoute extends Component {
     const { steps } = this.props
     const link = steps.menuInput.value
 
-    console.log(link)
-
-    this.props.handleLink(link)
-    self.setState({ loading: false})
-    this.props.triggerNextStep()
-    
-    // .then(success => {
-    //   self.setState({ loading: false}, () => {
-    //     this.props.triggerNextStep()
-    //   })
-    // })
-    // .catch(reason => {
-    //   console.error('onRejected function called: ', reason)
-    // })
+    this.handleLink = this.handleLink(link)
+    .then(success => {
+      self.setState({ loading: false}, () => {
+        this.props.triggerNextStep()
+      })
+    })
+    .catch(reason => {
+      console.error('onRejected function called: ', reason)
+    })
   }
 
   render () {
@@ -48,13 +46,13 @@ export default class SkillsRoute extends Component {
   }
 }
 
-SkillsRoute.propTypes = {
+skillsRoute.propTypes = {
   steps: PropTypes.object,
   triggerNextStep: PropTypes.func,
   handleLink: PropTypes.func
 }
 
-SkillsRoute.defaultProps = {
+skillsRoute.defaultProps = {
   steps: undefined,
   triggerNextStep: undefined,
   handleLink: undefined

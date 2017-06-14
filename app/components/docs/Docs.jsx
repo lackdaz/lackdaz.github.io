@@ -6,7 +6,7 @@ import ChatBot from '../chatbot/ChatBot'
 import menu from '../../menu'
 
 // custom chatbot components
-import Summary from '../redirect/skillsRoute'
+import SkillsRoute from '../../components/redirect/SkillsRoute'
 
 require('./Docs.css')
 
@@ -71,7 +71,9 @@ const Docs = (props) => {
                   },
                   {
                     id: 'story',
-                    component: <skillsRoute />,
+                    component: <SkillsRoute />,
+                    waitAction: true,
+                    replace: true,
                     asMessage: false,
                     trigger: 'story1'
                   },

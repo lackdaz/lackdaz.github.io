@@ -1,17 +1,38 @@
-.docs-component-1 .blue-td {
-  color: steelblue;
+.skills-container a:link {
+   color: rgba(0,0,0,1);
 }
 
-.docs-component-1 .red-td {
-  color: indianred;
+.skills-container a:hover {
+   opacity: 0.5;
+}
+
+.skills-container {
+  text-align: center;
+}
+
+.skills-container h3 {
+  font-size: 2vw;
+  margin-bottom: 20px;
 }
 
 .horizontal-list {
 	min-width: 100px;
 	list-style: none;
-	padding-top: 20px;
+	padding: 20px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .horizontal-list li {
-	display: inline;
+	display: inline-block;
+  padding: 0 2vw;
+}
+
+.horizontal-list li i {
+  font-size: 4em;
+}
+
+.horizontal-list li p {
+  max-width: 100px;
+  font-size: 1.5vmin;
 }
