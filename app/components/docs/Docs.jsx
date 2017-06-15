@@ -14,6 +14,7 @@ import TourCauses from '../../components/redirect/TourCauses'
 import TourProject2 from '../../components/redirect/TourProject2'
 import TourProject3 from '../../components/redirect/TourProject3'
 import TourProject4 from '../../components/redirect/TourProject4'
+import TourContact from '../../components/redirect/TourContact'
 
 require('./Docs.css')
 
@@ -30,8 +31,12 @@ const Docs = (props) => {
 
   return (
     <div className='docs'>
-      <Sidebar handleLink={props.handleLink} />
-      <main>
+      <Sidebar
+        handleLink={props.handleLink}
+        float={props.opened}
+      />
+
+      <main className={`${props.opened ? 'opened' : ''}`}>
         {
           link ? (
             <div className='main-container'>
@@ -41,10 +46,13 @@ const Docs = (props) => {
               />
               { link.component }
               <ChatBot
-                floating={true}
+                floating
                 handleLink={props.handleLink}
+                toggleFloating={props.toggleFloating}
                 botAvatar={'avatar.png'}
-                botDelay={500}
+                botDelay={2000}
+                customDelay={100}
+                opened={props.opened}
                 steps={[
                   {
                     id: '1',
@@ -59,9 +67,9 @@ const Docs = (props) => {
                   {
                     id: '3',
                     options: [
-                      { value: 'yes', label: 'Why not?', trigger: 'tour' },
-                      { value: 'no', label: 'Perhaps next time', trigger: 'menu' },
-                    ],
+                                        { value: 'yes', label: 'Why not?', trigger: 'tour' },
+                                        { value: 'no', label: 'Perhaps next time', trigger: 'menu' }
+                    ]
                   },
                   {
                     id: 'menu',
@@ -71,11 +79,11 @@ const Docs = (props) => {
                   {
                     id: 'menuInput',
                     options: [
-                      { value: '/about', label: 'Story', trigger: 'story' },
-                      { value: '/portfolio/project1', label: 'Portfolio', trigger: 'portfolio' },
-                      { value: '/skills', label: 'Skills', trigger: 'skills' },
-                      { value: 'contact', label: 'Contact', trigger: 'contact' },
-                    ],
+                                        { value: '/about', label: 'Story', trigger: 'story' },
+                                        { value: '/portfolio/project1', label: 'Portfolio', trigger: 'portfolio' },
+                                        { value: '/skills', label: 'Skills', trigger: 'skills' },
+                                        { value: 'contact', label: 'Contact', trigger: 'contact' }
+                    ]
                   },
                   {
                     id: 'tour',
@@ -128,9 +136,9 @@ const Docs = (props) => {
                   {
                     id: 'tour-about-ans',
                     options: [
-                      { value: 'yes', label: 'Ramble on', trigger: 'tour-causes-1' },
-                      { value: 'no', label: 'Stop', trigger: 'menu' },
-                    ],
+                                        { value: 'yes', label: 'Ramble on', trigger: 'tour-causes-1' },
+                                        { value: 'no', label: 'Stop', trigger: 'menu' }
+                    ]
                   },
                   {
                     id: 'tour-causes-1',
@@ -163,9 +171,9 @@ const Docs = (props) => {
                   {
                     id: 'tour-causes-ans',
                     options: [
-                      { value: 'yes', label: 'Wow, sure!', trigger: 'tour-project2-1' },
-                      { value: 'no', label: 'Stop', trigger: 'menu' },
-                    ],
+                                        { value: 'yes', label: 'Wow, sure!', trigger: 'tour-project2-1' },
+                                        { value: 'no', label: 'Stop', trigger: 'menu' }
+                    ]
                   },
                   {
                     id: 'tour-project2-1',
@@ -177,12 +185,12 @@ const Docs = (props) => {
                   },
                   {
                     id: 'tour-project2-2',
-                    message: 'Alright, I made a web-controlled RFID lock, that\'s basically it',
+                    message: 'Alright, I made a web-controlled RFID lock. That\'s basically it',
                     trigger: 'tour-project2-3'
                   },
                   {
                     id: 'tour-project2-3',
-                    message: 'Well the great thing is that you could create users, save their access codes and authorize them for use. Fancy',
+                    message: 'The great thing is that you could create users, save their access codes and authorize them for use. Fancy!',
                     trigger: 'tour-project2-4'
                   },
                   {
@@ -203,9 +211,9 @@ const Docs = (props) => {
                   {
                     id: 'tour-project2-ans',
                     options: [
-                      { value: 'yes', label: 'Wow, sure!', trigger: 'tour-project3-1' },
-                      { value: 'no', label: 'Stop', trigger: 'menu' },
-                    ],
+                                        { value: 'yes', label: 'Wow, sure!', trigger: 'tour-project3-1' },
+                                        { value: 'no', label: 'Stop', trigger: 'menu' }
+                    ]
                   },
                   {
                     id: 'tour-project3-1',
@@ -237,7 +245,7 @@ const Docs = (props) => {
                   },
                   {
                     id: 'tour-project3-6',
-                    message: 'It could also track temperature and humidity and alert if the food was getting cold or soggy',
+                    message: 'It could also track temperature and humidity, and alert if the food was getting cold or soggy',
                     trigger: 'tour-project3-last'
                   },
                   {
@@ -248,9 +256,9 @@ const Docs = (props) => {
                   {
                     id: 'tour-project3-ans',
                     options: [
-                      { value: 'yes', label: 'Wow, sure!', trigger: 'tour-project4-1' },
-                      { value: 'no', label: 'Stop', trigger: 'menu' },
-                    ],
+                                        { value: 'yes', label: 'Wow, sure!', trigger: 'tour-project4-1' },
+                                        { value: 'no', label: 'Stop', trigger: 'menu' }
+                    ]
                   },
                   {
                     id: 'tour-project4-1',
@@ -288,9 +296,9 @@ const Docs = (props) => {
                   {
                     id: 'tour-project4-ans',
                     options: [
-                      { value: 'yes', label: 'Yes, please', trigger: 'tour-skills-1' },
-                      { value: 'no', label: 'Stop', trigger: 'menu' },
-                    ],
+                                        { value: 'yes', label: 'Yes, please', trigger: 'tour-skills-1' },
+                                        { value: 'no', label: 'Stop', trigger: 'menu' }
+                    ]
                   },
                   {
                     id: 'tour-skills-1',
@@ -312,14 +320,74 @@ const Docs = (props) => {
                   },
                   {
                     id: 'tour-skills-4',
+                    message: 'I try to keep knives sharp, so you\'ll see what I\'m currently learning',
+                    trigger: 'tour-skills-last'
+                  },
+                  {
+                    id: 'tour-skills-last',
+                    message: 'Tell me when you\'re ready to continue',
+                    trigger: 'tour-skills-ans'
+                  },
+                  {
+                    id: 'tour-skills-ans',
+                    options: [
+                                        { value: 'yes', label: 'Yes', trigger: 'tour-contact-1' },
+                                        { value: 'no', label: 'Stop', trigger: 'menu' }
+                    ]
+                  },
+                  {
+                    id: 'tour-contact-1',
+                    component: <TourContact />,
+                    waitAction: true,
+                    replace: true,
+                    asMessage: false,
+                    trigger: 'tour-contact-2'
+                  },
+                  {
+                    id: 'tour-contact-2',
                     message: 'I try to keep knives sharp',
-                    trigger: 'end'
+                    trigger: 'tour-contact-3'
+                  },
+                  {
+                    id: 'tour-contact-3',
+                    message: 'Listed are my coding chops and creative contactets',
+                    trigger: 'tour-contact-4'
+                  },
+                  {
+                    id: 'tour-contact-4',
+                    message: 'I try to keep knives sharp, so you\'ll see what I\'m currently learning',
+                    trigger: 'tour-feedback-last'
+                  },
+                  {
+                    id: 'tour-feedback-last',
+                    message: 'We\'ve come to the end of the tour. Please rate your experience below. My master is watching',
+                    trigger: 'tour-feedback-ans'
+                  },
+                  {
+                    id: 'tour-feedback-ans',
+                    options: [
+                      { value: 'awesome', label: 'Awesome!', trigger: 'tour-end' },
+                      { value: 'okay', label: 'Nubbad', trigger: 'tour-end' },
+                      { value: 'meh', label: 'Meh', trigger: 'tour-end' }
+                    ]
+                  },
+                  {
+                    id: 'tour-end',
+                    message: 'Is there anything else I can do for you?',
+                    trigger: 'tour-end-ans'
+                  },
+                  {
+                    id: 'tour-end-ans',
+                    options: [
+                      { value: 'yes', label: 'Yes', trigger: 'menu' },
+                      { value: 'no', label: 'No', trigger: 'end' }
+                    ]
                   },
                   {
                     id: 'end',
                     message: 'Thank you so much for your time',
                     end: true
-                  },
+                  }
 
                 ]}
 />
@@ -338,7 +406,9 @@ const Docs = (props) => {
 
 Docs.propTypes = {
   link: PropTypes.string.isRequired,
-  handleLink: PropTypes.func.isRequired
+  handleLink: PropTypes.func.isRequired,
+  toggleFloating: PropTypes.func,
+  opened: PropTypes.bool
 }
 
 export default Docs

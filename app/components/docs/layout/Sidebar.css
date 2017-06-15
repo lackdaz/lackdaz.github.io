@@ -23,6 +23,14 @@
   border-right: 1px solid #e2e4e6;
   overflow-y: scroll;
   color: rgba(255, 255, 255, 1);
+  -webkit-transition:width 300ms ease-in-out, height 300ms ease-in-out;
+  -moz-transition:width 300ms ease-in-out, height 300ms ease-in-out;
+  -o-transition:width 300ms ease-in-out, height 300ms ease-in-out;
+  transition:width 300ms ease-in-out, height 300ms ease-in-out;
+}
+
+.float{
+  width: 15vw;
 }
 
 .sidebar .sidebar-header {
@@ -189,6 +197,10 @@
   .sidebar.opened {
     transform: translateX(0);
   }
+
+  /*.sidebar.opened.float{
+    width: 75%;
+  }*/
 
   .sidebar .sidebar-close-button {
     display: block;

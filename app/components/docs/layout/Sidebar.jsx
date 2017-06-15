@@ -11,7 +11,8 @@ class Sidebar extends Component {
     super(props)
 
     this.state = {
-      opened: false
+      opened: false,
+      float: false
     }
 
     this.renderSection = this.renderSection.bind(this)
@@ -84,6 +85,9 @@ class Sidebar extends Component {
 
   render () {
     const { opened } = this.state
+    const { float } = this.props
+
+    console.log(float)
 
     return (
       <div className='sidebar-container'>
@@ -91,7 +95,7 @@ class Sidebar extends Component {
           className='sidebar-toggle fa fa-bars'
           onClick={() => this.toggleSidebar()}
         />
-        <div className={`sidebar ${opened ? 'opened' : ''}`}>
+        <div className={`sidebar ${opened ? 'opened' : ''} ${float ? 'float' : ''}`}>
           <i
             className='sidebar-close-button fa fa-close'
             onClick={() => this.toggleSidebar()}
@@ -149,7 +153,8 @@ class Sidebar extends Component {
 }
 
 Sidebar.propTypes = {
-  handleLink: PropTypes.func.isRequired
+  handleLink: PropTypes.func.isRequired,
+  float: PropTypes.bool
 }
 
 export default Sidebar

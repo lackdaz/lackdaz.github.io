@@ -283,7 +283,7 @@ const Skills = () => (
               <li key={prop.name}>
                 <div className='blocks'>
                   <a href={href}>
-                    { {icon}.length > 1 ? <i className={icon} /> : <img src={`${name}.png`} /> }
+                    { {icon}.length > 1 ? <i className={`${icon} float`} /> : <img src={`${name}.png`} className='levitate'/> }
                     <div className='header'>
                       <p>{name}</p>
                     </div>

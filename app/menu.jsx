@@ -12,7 +12,6 @@ import Project4 from './components/docs/pages/examples/Project4';
 // API Referece
 import Skills from './components/docs/pages/reference/Skills';
 // Others
-import Contribute from './components/docs/pages/others/Contribute';
 import Github from './components/docs/pages/others/Github';
 
 
@@ -85,27 +84,27 @@ const menu = {
         {
           href: '/skills',
           title: 'Coding & Creative',
-          description: 'My chops',
+          description: '',
           component: <Skills />,
         },
       ],
     },
-    // {
-    //   title: 'Contact Me',
-    //   icon: 'fa fa-envelope',
-    //   links: [
-    //     {
-    //       href: '/engage',
-    //       title: 'How to Contribute',
-    //       component: <Contribute />,
-    //     },
-    //     {
-    //       href: '/docs/github',
-    //       title: 'Github Page',
-    //       component: <Github />,
-    //     },
-    //   ],
-    // },
+    {
+      title: 'Contact Me',
+      icon: 'fa fa-envelope',
+      links: [
+        // {
+        //   href: '/engage',
+        //   title: 'How to Contribute',
+        //   component: <Contribute />,
+        // },
+        {
+          href: '/docs/github',
+          title: 'Github Page',
+          component: <Github />,
+        },
+      ],
+    },
   ],
   ctas: [
     {

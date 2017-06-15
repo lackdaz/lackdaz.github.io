@@ -10,9 +10,11 @@ class App extends Component {
 
     this.state = {
       link: '/',
+      opened: false,
     };
 
     this.handleLink = this.handleLink.bind(this);
+    this.toggleFloating = this.toggleFloating.bind(this);
   }
 
   componentWillMount() {
@@ -29,6 +31,7 @@ class App extends Component {
     $('pre code').each((i, block) => {
       hljs.highlightBlock(block);
     });
+    window.scrollTo(0, 0)
   }
 
   handleLink(link) {
@@ -36,8 +39,12 @@ class App extends Component {
     this.setState({ link });
   }
 
+  toggleFloating({opened}) {
+    this.setState({ opened });
+  }
+
   render() {
-    const { link } = this.state;
+    const { link, opened } = this.state;
     console.log(link)
     // If its true, landing page will trigger
 
@@ -56,6 +63,8 @@ class App extends Component {
       <Docs
         link={link}
         handleLink={this.handleLink}
+        toggleFloating={this.toggleFloating}
+        opened={opened}
       />
     );
   }

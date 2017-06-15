@@ -3,6 +3,16 @@ main {
   padding: 10vh 10vw;
   background-color: #F5F5F5;
   height: 100vh;
+  -webkit-transition:width 300ms ease-in-out, height 300ms ease-in-out;
+  -moz-transition:width 300ms ease-in-out, height 300ms ease-in-out;
+  -o-transition:width 300ms ease-in-out, height 300ms ease-in-out;
+  transition:width 300ms ease-in-out, height 300ms ease-in-out;
+}
+
+.opened{
+  margin-left: 15vw;
+  padding: 10vh 10vw;
+  padding-right: 30vw;
 }
 
 main .main-container {
