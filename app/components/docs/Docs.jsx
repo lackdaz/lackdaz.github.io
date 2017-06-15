@@ -11,7 +11,9 @@ import AboutRoute from '../../components/redirect/AboutRoute'
 import TourAbout from '../../components/redirect/TourAbout'
 import TourSkills from '../../components/redirect/TourSkills'
 import TourCauses from '../../components/redirect/TourCauses'
-
+import TourProject2 from '../../components/redirect/TourProject2'
+import TourProject3 from '../../components/redirect/TourProject3'
+import TourProject4 from '../../components/redirect/TourProject4'
 
 require('./Docs.css')
 
@@ -42,7 +44,7 @@ const Docs = (props) => {
                 floating={true}
                 handleLink={props.handleLink}
                 botAvatar={'avatar.png'}
-                botDelay={1500}
+                botDelay={500}
                 steps={[
                   {
                     id: '1',
@@ -126,7 +128,7 @@ const Docs = (props) => {
                   {
                     id: 'tour-about-ans',
                     options: [
-                      { value: 'yes', label: 'Go on', trigger: 'tour-causes-1' },
+                      { value: 'yes', label: 'Ramble on', trigger: 'tour-causes-1' },
                       { value: 'no', label: 'Stop', trigger: 'menu' },
                     ],
                   },
@@ -145,18 +147,148 @@ const Docs = (props) => {
                   },
                   {
                     id: 'tour-causes-3',
-                    message: 'I teach beginners open-source hardware for free and look to ',
+                    message: 'I teach beginners open-source hardware for free',
                     trigger: 'tour-causes-4'
+                  },
+                  {
+                    id: 'tour-causes-4',
+                    message: 'and I\'ll do anything to keep a great cause going',
+                    trigger: 'tour-causes-last'
                   },
                   {
                     id: 'tour-causes-last',
                     message: 'You can read more here. Do tell me when to continue',
-                    trigger: 'tour-about-ans'
+                    trigger: 'tour-causes-ans'
                   },
                   {
-                    id: 'tour-about-ans',
+                    id: 'tour-causes-ans',
                     options: [
-                      { value: 'yes', label: 'Go on', trigger: 'tour-skills-1' },
+                      { value: 'yes', label: 'Wow, sure!', trigger: 'tour-project2-1' },
+                      { value: 'no', label: 'Stop', trigger: 'menu' },
+                    ],
+                  },
+                  {
+                    id: 'tour-project2-1',
+                    component: <TourProject2 />,
+                    waitAction: true,
+                    replace: true,
+                    asMessage: false,
+                    trigger: 'tour-project2-2'
+                  },
+                  {
+                    id: 'tour-project2-2',
+                    message: 'Alright, I made a web-controlled RFID lock, that\'s basically it',
+                    trigger: 'tour-project2-3'
+                  },
+                  {
+                    id: 'tour-project2-3',
+                    message: 'Well the great thing is that you could create users, save their access codes and authorize them for use. Fancy',
+                    trigger: 'tour-project2-4'
+                  },
+                  {
+                    id: 'tour-project2-4',
+                    message: 'It uses a MVC model with nodejs, express and a MongoDB database backend',
+                    trigger: 'tour-project2-5'
+                  },
+                  {
+                    id: 'tour-project2-5',
+                    message: 'The hardware uses an esp8266 microcontroller and a MFRC-422 card reader. All open-source!',
+                    trigger: 'tour-project2-last'
+                  },
+                  {
+                    id: 'tour-project2-last',
+                    message: 'You can read more here. Do tell me when to continue',
+                    trigger: 'tour-project2-ans'
+                  },
+                  {
+                    id: 'tour-project2-ans',
+                    options: [
+                      { value: 'yes', label: 'Wow, sure!', trigger: 'tour-project3-1' },
+                      { value: 'no', label: 'Stop', trigger: 'menu' },
+                    ],
+                  },
+                  {
+                    id: 'tour-project3-1',
+                    component: <TourProject3 />,
+                    waitAction: true,
+                    replace: true,
+                    asMessage: false,
+                    trigger: 'tour-project3-2'
+                  },
+                  {
+                    id: 'tour-project3-2',
+                    message: 'For this project, I tried to recreate the Uber Eats driver geolocating service',
+                    trigger: 'tour-project3-3'
+                  },
+                  {
+                    id: 'tour-project3-3',
+                    message: 'I hooked up some geeky hardware to track GPS coordinates',
+                    trigger: 'tour-project3-4'
+                  },
+                  {
+                    id: 'tour-project3-4',
+                    message: 'and used Google API to calculate time/distance to destination',
+                    trigger: 'tour-project3-5'
+                  },
+                  {
+                    id: 'tour-project3-5',
+                    message: 'and alert delivery arrival',
+                    trigger: 'tour-project3-6'
+                  },
+                  {
+                    id: 'tour-project3-6',
+                    message: 'It could also track temperature and humidity and alert if the food was getting cold or soggy',
+                    trigger: 'tour-project3-last'
+                  },
+                  {
+                    id: 'tour-project3-last',
+                    message: 'You can read more here. Do tell me when to continue',
+                    trigger: 'tour-project3-ans'
+                  },
+                  {
+                    id: 'tour-project3-ans',
+                    options: [
+                      { value: 'yes', label: 'Wow, sure!', trigger: 'tour-project4-1' },
+                      { value: 'no', label: 'Stop', trigger: 'menu' },
+                    ],
+                  },
+                  {
+                    id: 'tour-project4-1',
+                    component: <TourProject4 />,
+                    waitAction: true,
+                    replace: true,
+                    asMessage: false,
+                    trigger: 'tour-project4-2'
+                  },
+                  {
+                    id: 'tour-project4-2',
+                    message: 'For my capstone, we went big and wanted to do chatbot integration with sentiment analysis',
+                    trigger: 'tour-project4-3'
+                  },
+                  {
+                    id: 'tour-project4-3',
+                    message: 'Psst, it originally started with twitter analysis but their API is limited to real-time',
+                    trigger: 'tour-project4-4'
+                  },
+                  {
+                    id: 'tour-project4-4',
+                    message: 'Anyways, we found THIS, deployed to a website and spent the rest of time trying to figure out how it works -- under the hood',
+                    trigger: 'tour-project4-5'
+                  },
+                  {
+                    id: 'tour-project4-5',
+                    message: 'With a few tweaks, that\'s how I enslaved proto-seth to this webpage to serve as my spokesbot!',
+                    trigger: 'tour-project4-last'
+                  },
+                  {
+                    id: 'tour-project4-last',
+                    message: 'You can read more here. Tell me when you would like to know more about my coding chops',
+                    trigger: 'tour-project4-ans'
+                  },
+                  {
+                    id: 'tour-project4-ans',
+                    options: [
+                      { value: 'yes', label: 'Yes, please', trigger: 'tour-skills-1' },
                       { value: 'no', label: 'Stop', trigger: 'menu' },
                     ],
                   },

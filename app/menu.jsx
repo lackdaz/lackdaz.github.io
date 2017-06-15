@@ -45,7 +45,7 @@ const menu = {
         },
         {
           href: '/causes',
-          title: 'Causes I Support',
+          title: 'Causes I Love',
           component: <Causes />,
         },
       ],
