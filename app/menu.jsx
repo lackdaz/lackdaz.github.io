@@ -12,7 +12,7 @@ import Project4 from './components/docs/pages/examples/Project4';
 // API Referece
 import Skills from './components/docs/pages/reference/Skills';
 // Others
-import Github from './components/docs/pages/others/Github';
+import Contact from './components/docs/pages/others/Contact';
 
 
 
@@ -53,11 +53,11 @@ const menu = {
       title: 'Portfolio',
       icon: 'fa fa-code',
       links: [
-        {
-          href: '/portfolio/project1',
-          title: 'Save the Pangolin',
-          component: <Project1 />,
-        },
+        // {
+        //   href: '/portfolio/project1',
+        //   title: 'Save the Pangolin',
+        //   component: <Project1 />,
+        // },
         {
           href: '/portfolio/project2',
           title: 'Thingies',
@@ -99,9 +99,9 @@ const menu = {
         //   component: <Contribute />,
         // },
         {
-          href: '/docs/github',
-          title: 'Github Page',
-          component: <Github />,
+          href: '/contact',
+          title: 'Contact Me',
+          component: <Contact />,
         },
       ],
     },

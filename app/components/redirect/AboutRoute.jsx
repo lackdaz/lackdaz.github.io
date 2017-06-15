@@ -31,8 +31,8 @@ export default class AboutRoute extends Component {
 
   componentWillMount () {
     const self = this
-    const { steps } = this.props
-    const link = steps.menuInput.value
+    const { previousStep } = this.props
+    const link = previousStep.value
 
     const targetElement = $(`.sub-links a[data-href="${link}"]`)
 
@@ -48,8 +48,12 @@ export default class AboutRoute extends Component {
     })
     .catch((err)=>{
     })
+  }
 
-
+  componentDidMount() {
+    setTimeout(() => {
+      this.props.closeChatBot({ opened: false })
+    }, 8000);
   }
 
   render () {
@@ -66,11 +70,13 @@ export default class AboutRoute extends Component {
 AboutRoute.propTypes = {
   steps: PropTypes.object,
   triggerNextStep: PropTypes.func,
-  handleLink: PropTypes.func
+  handleLink: PropTypes.func,
+  closeChatBot: PropTypes.func,
 }
 
 AboutRoute.defaultProps = {
   steps: undefined,
   triggerNextStep: undefined,
-  handleLink: undefined
+  handleLink: undefined,
+  closeChatBot: undefined
 }

@@ -28,7 +28,7 @@ class CustomStep extends Component {
   }
 
   renderComponent() {
-    const { step, steps, previousStep, triggerNextStep, handleLink } = this.props;
+    const { step, steps, previousStep, triggerNextStep, handleLink, closeChatBot } = this.props;
     const { component } = step;
     return React.cloneElement(component, {
       step,
@@ -36,6 +36,7 @@ class CustomStep extends Component {
       previousStep,
       triggerNextStep,
       handleLink,
+      closeChatBot
     });
   }
 
@@ -63,7 +64,8 @@ CustomStep.propTypes = {
   style: PropTypes.object.isRequired,
   previousStep: PropTypes.object.isRequired,
   triggerNextStep: PropTypes.func.isRequired,
-  handleLink: PropTypes.func
+  handleLink: PropTypes.func,
+  closeChatBot: PropTypes.func
 };
 
 export default CustomStep;

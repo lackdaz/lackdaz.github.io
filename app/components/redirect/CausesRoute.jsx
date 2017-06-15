@@ -31,8 +31,8 @@ export default class CausesRoute extends Component {
 
   componentWillMount () {
     const self = this
-    const { steps } = this.props
-    const link = steps.menuInput.value
+    const { previousStep } = this.props
+    const link = previousStep.value
 
     const targetElement = $(`.sub-links a[data-href="${link}"]`)
 
@@ -48,8 +48,12 @@ export default class CausesRoute extends Component {
     })
     .catch((err)=>{
     })
+  }
 
-
+  componentDidMount() {
+    setTimeout(() => {
+      this.props.closeChatBot({ opened: false })
+    }, 8000);
   }
 
   render () {

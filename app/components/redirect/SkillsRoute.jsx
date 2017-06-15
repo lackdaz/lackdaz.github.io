@@ -31,8 +31,8 @@ export default class SkillsRoute extends Component {
 
   componentWillMount () {
     const self = this
-    const { steps } = this.props
-    const link = steps.menuInput.value
+    const { previousStep } = this.props
+    const link = previousStep.value
 
     const targetElement = $(`.sub-links a[data-href="${link}"]`)
 
@@ -41,7 +41,7 @@ export default class SkillsRoute extends Component {
       targetElement.click()
       resolve("Success!")
       self.setState({loading:false})
-      
+
     })
 
     p1.then((success)=>{
@@ -49,8 +49,12 @@ export default class SkillsRoute extends Component {
     })
     .catch((err)=>{
     })
+  }
 
-
+  componentDidMount() {
+    setTimeout(() => {
+      this.props.closeChatBot({ opened: false })
+    }, 8000);
   }
 
   render () {

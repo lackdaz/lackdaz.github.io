@@ -237,6 +237,10 @@ class ChatBot extends Component {
     if (this.props.handleEnd) {
       this.props.handleEnd({ renderedSteps, steps, values });
     }
+    setTimeout
+    setTimeout(() => {
+      this.closeChatBot({ opened: false })
+    }, 3000);
   }
 
   isLastPosition(step) {
@@ -402,6 +406,7 @@ class ChatBot extends Component {
           previousStep={previousStep}
           triggerNextStep={this.triggerNextStep}
           handleLink={handleLink}
+          closeChatBot={this.closeChatBot.bind(this)}
         />
       );
     }
@@ -514,7 +519,7 @@ class ChatBot extends Component {
               type="textarea"
               style={inputStyle}
               className="rsc-input"
-              placeholder="Type the message ..."
+              placeholder="Disabled"
               onKeyPress={this.handleKeyPress}
               onChange={this.onValueChange}
               value={inputValue}

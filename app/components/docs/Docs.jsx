@@ -10,6 +10,7 @@ import AboutRoute from '../../components/redirect/AboutRoute'
 import SkillsRoute from '../../components/redirect/SkillsRoute'
 import CausesRoute from '../../components/redirect/CausesRoute'
 import ContactRoute from '../../components/redirect/ContactRoute'
+import ProjectRoute from '../../components/redirect/ProjectRoute'
 
 import TourAbout from '../../components/redirect/TourAbout'
 import TourSkills from '../../components/redirect/TourSkills'
@@ -53,7 +54,7 @@ const Docs = (props) => {
                 handleLink={props.handleLink}
                 toggleFloating={props.toggleFloating}
                 botAvatar={'avatar.png'}
-                botDelay={2000}
+                botDelay={500}
                 customDelay={100}
                 opened={props.opened}
                 steps={[
@@ -64,14 +65,14 @@ const Docs = (props) => {
                   },
                   {
                     id: '2',
-                    message: 'Would you like me to give you a tour?',
+                    message: 'Would you like me to give you a tour? (3 mins)',
                     trigger: '3'
                   },
                   {
                     id: '3',
                     options: [
                                         { value: 'yes', label: 'Why not?', trigger: 'tour' },
-                                        { value: 'no', label: 'Perhaps next time', trigger: 'menu' }
+                                        { value: 'no', label: 'Perhaps later', trigger: 'menu' }
                     ]
                   },
                   {
@@ -84,7 +85,7 @@ const Docs = (props) => {
                     options: [
                                         { value: '/about', label: 'Story', trigger: 'story' },
                                         { value: '/causes', label: 'Causes', trigger: 'causes' },
-                                        { value: '/portfolio/project2', label: 'Portfolio', trigger: 'portfolio' },
+                                        { value: '/portfolio/project4', label: 'Portfolio', trigger: 'portfolio' },
                                         { value: '/skills', label: 'Skills', trigger: 'skills' },
                                         { value: '/contact', label: 'Contact', trigger: 'contact' },
                                         { value: 'end', label: 'End', trigger: 'end' }
@@ -118,7 +119,143 @@ const Docs = (props) => {
                     options: [
                       { value: '/about', label: 'Story', trigger: 'story' },
                       { value: '/causes', label: 'Causes', trigger: 'causes' },
-                      { value: '/portfolio/project2', label: 'Portfolio', trigger: 'portfolio' },
+                      { value: '/portfolio/project4', label: 'Portfolio', trigger: 'portfolio' },
+                      { value: '/skills', label: 'Skills', trigger: 'skills' },
+                      { value: '/contact', label: 'Contact', trigger: 'contact' },
+                      { value: 'end', label: 'End', trigger: 'end' }
+                    ]
+                  },
+                  {
+                    id: 'causes',
+                    component: <CausesRoute />,
+                    waitAction: true,
+                    replace: true,
+                    asMessage: false,
+                    trigger: 'causes1'
+                  },
+                  {
+                    id: 'causes1',
+                    message: 'There you go...I flip pages fast',
+                    trigger: 'causes2'
+                  },
+                  {
+                    id: 'causes2',
+                    message: 'I\'m going to hide for a bit now',
+                    trigger: 'causes-about-last'
+                  },
+                  {
+                    id: 'causes-about-last',
+                    message: 'Do tell me when you need my help',
+                    trigger: 'causes-about-ans'
+                  },
+                  {
+                    id: 'causes-about-ans',
+                    options: [
+                      { value: '/about', label: 'Story', trigger: 'story' },
+                      { value: '/causes', label: 'Causes', trigger: 'causes' },
+                      { value: '/portfolio/project4', label: 'Portfolio', trigger: 'portfolio' },
+                      { value: '/skills', label: 'Skills', trigger: 'skills' },
+                      { value: '/contact', label: 'Contact', trigger: 'contact' },
+                      { value: 'end', label: 'End', trigger: 'end' }
+                    ]
+                  },
+                  {
+                    id: 'contact',
+                    component: <ContactRoute />,
+                    waitAction: true,
+                    replace: true,
+                    asMessage: false,
+                    trigger: 'contact1'
+                  },
+                  {
+                    id: 'contact1',
+                    message: 'There you go...I flip pages fast',
+                    trigger: 'contact2'
+                  },
+                  {
+                    id: 'contact2',
+                    message: 'I\'m going to hide for a bit now',
+                    trigger: 'contact-about-last'
+                  },
+                  {
+                    id: 'contact-about-last',
+                    message: 'Do tell me when you need my help',
+                    trigger: 'contact-about-ans'
+                  },
+                  {
+                    id: 'contact-about-ans',
+                    options: [
+                      { value: '/about', label: 'Story', trigger: 'story' },
+                      { value: '/causes', label: 'Causes', trigger: 'causes' },
+                      { value: '/portfolio/project4', label: 'Portfolio', trigger: 'portfolio' },
+                      { value: '/skills', label: 'Skills', trigger: 'skills' },
+                      { value: '/contact', label: 'Contact', trigger: 'contact' },
+                      { value: 'end', label: 'End', trigger: 'end' }
+                    ]
+                  },
+                  {
+                    id: 'skills',
+                    component: <SkillsRoute />,
+                    waitAction: true,
+                    replace: true,
+                    asMessage: false,
+                    trigger: 'skills1'
+                  },
+                  {
+                    id: 'skills1',
+                    message: 'There you go...I flip pages fast',
+                    trigger: 'skills2'
+                  },
+                  {
+                    id: 'skills2',
+                    message: 'I\'m going to hide for a bit now',
+                    trigger: 'skills-about-last'
+                  },
+                  {
+                    id: 'skills-about-last',
+                    message: 'Do tell me when you need my help',
+                    trigger: 'skills-about-ans'
+                  },
+                  {
+                    id: 'skills-about-ans',
+                    options: [
+                      { value: '/about', label: 'Story', trigger: 'story' },
+                      { value: '/causes', label: 'Causes', trigger: 'causes' },
+                      { value: '/portfolio/project4', label: 'Portfolio', trigger: 'portfolio' },
+                      { value: '/skills', label: 'Skills', trigger: 'skills' },
+                      { value: '/contact', label: 'Contact', trigger: 'contact' },
+                      { value: 'end', label: 'End', trigger: 'end' }
+                    ]
+                  },
+                  {
+                    id: 'portfolio',
+                    component: <ProjectRoute />,
+                    waitAction: true,
+                    replace: true,
+                    asMessage: false,
+                    trigger: 'portfolio1'
+                  },
+                  {
+                    id: 'portfolio1',
+                    message: 'There you go...I flip pages fast',
+                    trigger: 'portfolio2'
+                  },
+                  {
+                    id: 'portfolio2',
+                    message: 'I\'m going to hide for a bit now',
+                    trigger: 'portfolio-about-last'
+                  },
+                  {
+                    id: 'portfolio-about-last',
+                    message: 'Do tell me when you need my help',
+                    trigger: 'portfolio-about-ans'
+                  },
+                  {
+                    id: 'portfolio-about-ans',
+                    options: [
+                      { value: '/about', label: 'Story', trigger: 'story' },
+                      { value: '/causes', label: 'Causes', trigger: 'causes' },
+                      { value: '/portfolio/project4', label: 'Portfolio', trigger: 'portfolio' },
                       { value: '/skills', label: 'Skills', trigger: 'skills' },
                       { value: '/contact', label: 'Contact', trigger: 'contact' },
                       { value: 'end', label: 'End', trigger: 'end' }
@@ -250,8 +387,11 @@ const Docs = (props) => {
                   {
                     id: 'tour-project2-ans',
                     options: [
-                                        { value: 'yes', label: 'Wow, sure!', trigger: 'tour-project3-1' },
-                                        { value: 'no', label: 'Stop', trigger: 'menu' }
+                                { value: 'yes', label: 'Next!', trigger: 'tour-project3-1' },
+                                { value: 'skip', label: 'Skip to best project!', trigger: 'tour-project4-1' },
+                                { value: 'skip2', label: 'Skip to skills!', trigger: 'tour-skills-1'},
+                                { value: 'no', label: 'Stop', trigger: 'menu' }
+
                     ]
                   },
                   {
@@ -295,7 +435,8 @@ const Docs = (props) => {
                   {
                     id: 'tour-project3-ans',
                     options: [
-                                        { value: 'yes', label: 'Wow, sure!', trigger: 'tour-project4-1' },
+                                        { value: 'yes', label: 'Tell me more!', trigger: 'tour-project4-1' },
+                                        { value: 'skip2', label: 'Skip to skills!', trigger: 'tour-skills-1'},
                                         { value: 'no', label: 'Stop', trigger: 'menu' }
                     ]
                   },
@@ -349,12 +490,12 @@ const Docs = (props) => {
                   },
                   {
                     id: 'tour-skills-2',
-                    message: 'I try to keep knives sharp',
+                    message: '*rubs hands*',
                     trigger: 'tour-skills-3'
                   },
                   {
                     id: 'tour-skills-3',
-                    message: 'Listed are my coding chops and creative skillsets',
+                    message: 'Listed here are my coding chops and creative skillsets',
                     trigger: 'tour-skills-4'
                   },
                   {
@@ -384,22 +525,17 @@ const Docs = (props) => {
                   },
                   {
                     id: 'tour-contact-2',
-                    message: 'I try to keep knives sharp',
+                    message: 'You can contact me at any of these handles, and please do...',
                     trigger: 'tour-contact-3'
                   },
                   {
                     id: 'tour-contact-3',
-                    message: 'Listed are my coding chops and creative contactets',
-                    trigger: 'tour-contact-4'
-                  },
-                  {
-                    id: 'tour-contact-4',
-                    message: 'I try to keep knives sharp, so you\'ll see what I\'m currently learning',
+                    message: 'because I\'m always keen for exciting new opportunities - both commercial and pro-bono',
                     trigger: 'tour-feedback-last'
                   },
                   {
                     id: 'tour-feedback-last',
-                    message: 'We\'ve come to the end of the tour. Please rate your experience below. My master is watching',
+                    message: 'We\'ve come to the end of the tour. I have one last request for you to rate this experience. My life depends on this *gulp*',
                     trigger: 'tour-feedback-ans'
                   },
                   {

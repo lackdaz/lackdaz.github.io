@@ -44,7 +44,6 @@ class Sidebar extends Component {
 
       if (href !== '#') {
         links.removeClass('selected-link')
-        console.log(this)
         $(this).addClass('selected-link')
         self.setState({ opened: false })
       }
@@ -86,8 +85,6 @@ class Sidebar extends Component {
   render () {
     const { opened } = this.state
     const { float } = this.props
-
-    console.log(float)
 
     return (
       <div className='sidebar-container'>

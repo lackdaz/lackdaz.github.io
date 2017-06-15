@@ -32,12 +32,12 @@ export default class TourContact extends Component {
   componentWillMount () {
     const self = this
     const { steps } = this.props
-    const link = '/skills'
+    const link = '/contact'
 
     const targetElement = $(`.sub-links a[data-href="${link}"]`)
 
-    console.log(targetElement)
-    console.log(link)
+    
+
 
     let p1 = new Promise((resolve, reject) => {
       this.props.handleLink(link)

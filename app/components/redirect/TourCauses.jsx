@@ -36,9 +36,6 @@ export default class TourCauses extends Component {
 
     const targetElement = $(`.sub-links a[data-href="${link}"]`)
 
-    console.log(targetElement)
-    console.log(link)
-
     let p1 = new Promise((resolve, reject) => {
       this.props.handleLink(link)
       targetElement.click()

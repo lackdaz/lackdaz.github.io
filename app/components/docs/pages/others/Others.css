@@ -1,0 +1,24 @@
+.contact-container {
+}
+
+.contact-ctas {
+  max-width: 100%;
+  list-style: none;
+  text-align: center;
+}
+
+.contact-ctas li {
+  display: inline-block;
+  padding: 0 2vw;
+  min-width: 4vw;
+  font-size: 4em;
+}
+
+.contact-ctas li:hover{
+  color: #68536C;
+  -webkit-transition: all 200ms ease-out 50ms;
+  -moz-transition: all 200ms ease-out 50ms;
+  -o-transition: all 200ms ease-out 50ms;
+  transition: all 200ms ease-out 50ms;
+  transform: scale(1.1);
+}

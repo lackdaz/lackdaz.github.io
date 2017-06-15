@@ -45,7 +45,6 @@ class App extends Component {
 
   render() {
     const { link, opened } = this.state;
-    console.log(link)
     // If its true, landing page will trigger
 
     // const isHome = link.indexOf('/docs') < 0;
