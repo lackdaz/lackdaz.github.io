@@ -10,14 +10,18 @@ npm start
 const About = () => (
   <div className='docs-installation'>
     <p>
-      My name is Seth Loh Wei Chen and I’m a full-stack web developer graduate from the General Assembly Web Development Immersive. I grew up in Singapore and graduated with a B.Soc.Sci.(Hons) in Economics from the National University of Singapore (NUS) and had worked previous stints as a data analyst, product development and logistics.
-      <br></br>
-      <br></br>
-      I'm a zealous reader of the New York Times, and it has served as an immense source of inspiration for this webpage. I look to showcase my work, blog, share about social causes and engage with the online and offline tech community, and reach out to collaborators, prospects or friends of the internet.
-      <br></br>
-      <br></br>
-      As you might have probably noticed that flashing button on the bottom right by now, I've coded up a chatbot to walk you through this journey, and I've uninspiringly named him "Proto-Seth". Be nice.
+      Hello! Welcome to my Portfolio Page! I'm Seth, a web developer and I love building cool things online and sharing the inspiring work others are doing.
     </p>
+    <p>
+      I'm a zealous reader of the New York Times, and it has served as the main source of inspiration for this webpage which I look to showcase my work, blog and share about social causes.
+    </p>
+    <p>
+      I wanted to make this a fun experience, so as you might have noticed that flashing button at bottom right of the screen, I've coded up a chatbot to walk you through this journey, unimaginatively named "Proto-Seth". Be nice to him.
+    </p>
+
+      <br></br>
+      <br></br>
+
   </div>
 )
 

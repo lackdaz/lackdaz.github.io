@@ -2,6 +2,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import ChatBot, { Loading } from 'react-simple-chatbot'
+const $ = require('jquery')
 
 require('./Home.css')
 
@@ -14,6 +15,24 @@ export default class SkillsRoute extends Component {
       trigger: false,
       result: ''
     }
+
+  this.handleLink = this.handleLink.bind(this)
+  }
+
+  handleLink(event) {
+    if (this.handleLink) {
+      this.props.handleLink(event);
+      resolve("Success!");
+    } else {
+      this.setState({ loading: true });
+    }
+
+    event.preventDefault()
+    linkDivs.removeClass('selected')
+    $(this).addClass('selected')
+
+    this.props.handleLink(link)
+
   }
 
   componentWillMount () {
@@ -21,26 +40,29 @@ export default class SkillsRoute extends Component {
     const { steps } = this.props
     const link = steps.menuInput.value
 
+    const targetElement = $(`.sub-links a[data-href="${link}"]`)
+
+    console.log(targetElement)
+
     console.log(link)
 
-    this.props.handleLink(link).then(success => {
-      self.setState({ loading: false})
-    })
-    .then(success =>{
-      this.props.triggerNextStep()
-    })
-    .catch(reason => {
+    let p1 = new Promise((resolve, reject) => {
+      this.props.handleLink(link)
+      targetElement.click()
+      resolve("Success!")
     })
 
+    p1.then((success)=>{
+    })
+    // .then((success)=>{
+    // 	this.props.triggerNextStep()
+    // })
+    .catch((err)=>{
+    })
 
-    // .then(success => {
-    //   self.setState({ loading: false}, () => {
-    //     this.props.triggerNextStep()
-    //   })
-    // })
-    // .catch(reason => {
-    //   console.error('onRejected function called: ', reason)
-    // })
+    self.setState({loading:false})
+    this.props.triggerNextStep()
+
   }
 
   render () {

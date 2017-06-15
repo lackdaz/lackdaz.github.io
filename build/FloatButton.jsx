@@ -6,7 +6,7 @@ const FloatButton = styled.a`
   background: ${props => props.headerBgColor};
   bottom: 32px;
   border-radius: 100%;
-  box-shadow: 0 0 5px 0 rgba(110, 72, 170, 0.5);
+  box-shadow: 0 0 5px 0 rgba(232, 76, 61, 0.5);
   display: flex;
   fill: ${props => props.headerFontColor};
   height: 56px;
