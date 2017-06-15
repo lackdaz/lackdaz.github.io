@@ -54,7 +54,7 @@ const Docs = (props) => {
                 handleLink={props.handleLink}
                 toggleFloating={props.toggleFloating}
                 botAvatar={'avatar.png'}
-                botDelay={500}
+                botDelay={1800}
                 customDelay={100}
                 opened={props.opened}
                 steps={[
