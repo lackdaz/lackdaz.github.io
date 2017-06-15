@@ -21,7 +21,8 @@ const Contact = () => (
         })
       }
     </ul>
-    <p>
+    <p className='tagline'>
+      I am on the lookout for opportunities, let's chat!
     </p>
   </div>
 );

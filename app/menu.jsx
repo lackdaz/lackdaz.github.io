@@ -100,7 +100,7 @@ const menu = {
         // },
         {
           href: '/contact',
-          title: 'Contact Me',
+          title: 'Social',
           component: <Contact />,
         },
       ],

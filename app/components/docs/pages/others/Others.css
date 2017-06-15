@@ -22,3 +22,7 @@
   transition: all 200ms ease-out 50ms;
   transform: scale(1.1);
 }
+
+.tagline {
+  text-align: center;
+}
