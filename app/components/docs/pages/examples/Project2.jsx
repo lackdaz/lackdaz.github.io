@@ -1,5 +1,7 @@
 import React from 'react';
 
+require('./Example.css')
+
 const Example2 = () => (
   <div className="docs-example-2">
     <div className='resized'>
@@ -13,6 +15,7 @@ const Example2 = () => (
     <p>
       Thingies comes with a dashboard (bootstrap) and a MongoDB Database to log and verify access via RFID. It was made with entirely open-source software and hardware within a week. Find out more at my github!
     </p>
+    <p className="git-center">See it in action <a href='https://thingies.herokuapp.com/'><strong><u>here</u></strong></a> or check out the <a href='https://github.com/lackdaz/wdi-project-2'><strong><u>codes</u></strong></a></p>
   </div>
 );
 

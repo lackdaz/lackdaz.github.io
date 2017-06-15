@@ -90,22 +90,22 @@ const menu = {
         },
       ],
     },
-    {
-      title: 'Contact Me',
-      icon: 'fa fa-envelope',
-      links: [
-        {
-          href: '/engage',
-          title: 'How to Contribute',
-          component: <Contribute />,
-        },
-        {
-          href: '/docs/github',
-          title: 'Github Page',
-          component: <Github />,
-        },
-      ],
-    },
+    // {
+    //   title: 'Contact Me',
+    //   icon: 'fa fa-envelope',
+    //   links: [
+    //     {
+    //       href: '/engage',
+    //       title: 'How to Contribute',
+    //       component: <Contribute />,
+    //     },
+    //     {
+    //       href: '/docs/github',
+    //       title: 'Github Page',
+    //       component: <Github />,
+    //     },
+    //   ],
+    // },
   ],
   ctas: [
     {

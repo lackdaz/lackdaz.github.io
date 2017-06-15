@@ -1,3 +1,7 @@
 main .resized {
   padding: 5vmin 10vmin;
 }
+
+.git-center {
+  text-align: center;
+}

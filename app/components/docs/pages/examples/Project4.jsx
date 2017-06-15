@@ -24,6 +24,7 @@ const Example2 = () => (
     <p>
       We are also happy to have contributed back to the react-simple-chatbot project with user feedback on how to introduce dynamic chat routing and chat toggling.
     </p>
+    <p className="git-center">See it in action <a href='https://postalcsbot.herokuapp.com/'><strong><u>here</u></strong></a> or check out the <a href='https://github.com/lackdaz/wdi-project4'><strong><u>codes</u></strong></a></p>
   </div>
 )
 
