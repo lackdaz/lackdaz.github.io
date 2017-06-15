@@ -1,52 +1,18 @@
 import React from 'react';
 
-const helloWorldCode =
-`import React from 'react';
-// Intro pages
-import Installation from './components/docs/pages/intro/Installation';
-import Causes from './components/docs/pages/intro/Causes';
-
-const menu = {
-  title: 'REACT SPA Boilerplate',
-  description: 'A React SPA boilerplate for open source projects',
-  homeLink: '/',
-  docsLink: '/docs/installation',
-  github: {
-    user: 'lucasbassetti',
-    repository: 'react-spa-boilerplate',
-  },
-  sections: [
-    {
-      title: 'Intro',
-      icon: 'fa fa-arrow-right',
-      links: [
-        {
-          href: '/docs/installation',
-          title: 'Installation',
-          component: <Installation/>,
-        },
-        {
-          href: '/docs/hello-world',
-          title: 'Hello World',
-          component: <Causes/>,
-        },
-      ],
-    },
-    ...
-  ],
-};
-
-export default menu;
-`;
-
 const Causes = () => (
   <div className='docs-installation'>
     <p>
-      Over the years, both work and leisure has brought me on many overseas adventures. I've backpacked across Central and Eastern Europe on a number of occasions, worked in Laos, stayed for an extended period of time in Utrecht. During a week-long flight delay while on a work trip to China, I programmed a POS / SOA automation script with VBA.
-
-      After meeting my partner Cleavan, we celebrated our graduation with a road trip from D.C. to Key West (2,414 miles round-trip) and I now spend my December breaks visiting the folks in Oregon, USA.
-
-      After leaving my last job,
+      I've worked alongside social innovators, community thought leaders, passionate artists and the inter-faith circles with a common purpose of social empowerment and encouraging civic dialogue.
+    </p>
+    <p>
+      Beginning with Repair Kopitiam, an island-wide initiative to bring people together to repair their home appliances, clothes, furniture, and toys, I found great joy in purposing my handyman skills to breathe new life into damaged items. You can read about my story <a href="http://repairkopitiam.sg/repair-stories/seth-loh/"><strong><u>here</u></strong></a>
+    </p>
+    <p>
+      I founded the Citizen Makers, an informal citizen arts collective questioning technocentric narratives, support community arts groups, Yarnbombing Singapore, with pro-bono web design and funding advisory.
+    </p>
+    <p>
+      If you have a great cause to share, you can always reach me <a href="mailto:lackdaz@gmail.com?Subject=Hello%20Seth"><strong><u>here</u></strong></a>
     </p>
   </div>
 );

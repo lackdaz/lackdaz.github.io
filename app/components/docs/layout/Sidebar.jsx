@@ -126,10 +126,6 @@ class Sidebar extends Component {
               </div>
             </a>
           </div>
-
-          <div className='sidebar-links'>
-            {_.map(menu.sections, this.renderSection)}
-          </div>
           <ul className='sidebar-ctas'>
             {
               menu.ctas.map((ctas) => {
@@ -146,6 +142,11 @@ class Sidebar extends Component {
               })
             }
           </ul>
+
+          <div className='sidebar-links'>
+            {_.map(menu.sections, this.renderSection)}
+          </div>
+
         </div>
       </div>
     )

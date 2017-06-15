@@ -6,7 +6,7 @@ const $ = require('jquery')
 
 require('./Home.css')
 
-export default class AboutRoute extends Component {
+export default class CausesRoute extends Component {
   constructor (props) {
     super(props)
 
@@ -63,13 +63,13 @@ export default class AboutRoute extends Component {
   }
 }
 
-AboutRoute.propTypes = {
+CausesRoute.propTypes = {
   steps: PropTypes.object,
   triggerNextStep: PropTypes.func,
   handleLink: PropTypes.func
 }
 
-AboutRoute.defaultProps = {
+CausesRoute.defaultProps = {
   steps: undefined,
   triggerNextStep: undefined,
   handleLink: undefined

@@ -6,7 +6,7 @@ const $ = require('jquery')
 
 require('./Home.css')
 
-export default class AboutRoute extends Component {
+export default class SkillsRoute extends Component {
   constructor (props) {
     super(props)
 
@@ -41,6 +41,7 @@ export default class AboutRoute extends Component {
       targetElement.click()
       resolve("Success!")
       self.setState({loading:false})
+      
     })
 
     p1.then((success)=>{
@@ -63,13 +64,13 @@ export default class AboutRoute extends Component {
   }
 }
 
-AboutRoute.propTypes = {
+SkillsRoute.propTypes = {
   steps: PropTypes.object,
   triggerNextStep: PropTypes.func,
   handleLink: PropTypes.func
 }
 
-AboutRoute.defaultProps = {
+SkillsRoute.defaultProps = {
   steps: undefined,
   triggerNextStep: undefined,
   handleLink: undefined

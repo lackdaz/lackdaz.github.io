@@ -7,6 +7,9 @@ import menu from '../../menu'
 
 // custom chatbot components
 import AboutRoute from '../../components/redirect/AboutRoute'
+import SkillsRoute from '../../components/redirect/SkillsRoute'
+import CausesRoute from '../../components/redirect/CausesRoute'
+import ContactRoute from '../../components/redirect/ContactRoute'
 
 import TourAbout from '../../components/redirect/TourAbout'
 import TourSkills from '../../components/redirect/TourSkills'
@@ -80,9 +83,45 @@ const Docs = (props) => {
                     id: 'menuInput',
                     options: [
                                         { value: '/about', label: 'Story', trigger: 'story' },
-                                        { value: '/portfolio/project1', label: 'Portfolio', trigger: 'portfolio' },
+                                        { value: '/causes', label: 'Causes', trigger: 'causes' },
+                                        { value: '/portfolio/project2', label: 'Portfolio', trigger: 'portfolio' },
                                         { value: '/skills', label: 'Skills', trigger: 'skills' },
-                                        { value: 'contact', label: 'Contact', trigger: 'contact' }
+                                        { value: '/contact', label: 'Contact', trigger: 'contact' },
+                                        { value: 'end', label: 'End', trigger: 'end' }
+                    ]
+                  },
+                  {
+                    id: 'story',
+                    component: <AboutRoute />,
+                    waitAction: true,
+                    replace: true,
+                    asMessage: false,
+                    trigger: 'story1'
+                  },
+                  {
+                    id: 'story1',
+                    message: 'There you go...I flip pages fast',
+                    trigger: 'story2'
+                  },
+                  {
+                    id: 'story2',
+                    message: 'I\'m going to hide for a bit now',
+                    trigger: 'story-about-last'
+                  },
+                  {
+                    id: 'story-about-last',
+                    message: 'Do tell me when you need my help',
+                    trigger: 'story-about-ans'
+                  },
+                  {
+                    id: 'story-about-ans',
+                    options: [
+                      { value: '/about', label: 'Story', trigger: 'story' },
+                      { value: '/causes', label: 'Causes', trigger: 'causes' },
+                      { value: '/portfolio/project2', label: 'Portfolio', trigger: 'portfolio' },
+                      { value: '/skills', label: 'Skills', trigger: 'skills' },
+                      { value: '/contact', label: 'Contact', trigger: 'contact' },
+                      { value: 'end', label: 'End', trigger: 'end' }
                     ]
                   },
                   {
