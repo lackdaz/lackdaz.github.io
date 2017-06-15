@@ -25,10 +25,7 @@ const About = () => (
       But alas, as I traipsed from the world of hardware into the Internet of Things (IoT), ostensibly to create useful applications of the technology - There were bits of code so deeply profound that it troubled me for nights on end and lured me deeper into this bottomless dimension. I took the plunge, left my dream job and signed up for the GA Web Immersive in the hopes of understanding the tech stacks behind these little bits of hardware.
       <br></br>
       <br></br>
-      I'm a zealous reader of the New York Times, and it has served as an immense source of inspiration for this webpage. I look to showcase my work, blog, share about social causes and engage with the online and offline tech community, and reach out to collaborators, prospects or friends of the internet.
-      <br></br>
-      <br></br>
-      As you might have probably noticed that flashing button on the bottom right by now, I've coded up a chatbot to walk you through this journey, and I've uninspiringly named him "Proto-Seth". Be nice.
+      Ever since, I've programmed web solutions with the toolkits that both GA and the internet have provided. Most of the time,
 
       Over the years, both work and leisure has brought me on many overseas adventures. I've backpacked across Central and Eastern Europe on a number of occasions, worked in Laos, stayed for an extended period of time in Utrecht. During a week-long flight delay while on a work trip to China, I programmed a POS / SOA automation script with VBA.
 

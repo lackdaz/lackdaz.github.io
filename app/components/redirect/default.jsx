@@ -6,7 +6,7 @@ const $ = require('jquery')
 
 require('./Home.css')
 
-export default class SkillsRoute extends Component {
+export default class AboutRoute extends Component {
   constructor (props) {
     super(props)
 
@@ -26,13 +26,7 @@ export default class SkillsRoute extends Component {
     } else {
       this.setState({ loading: true });
     }
-
-    event.preventDefault()
-    linkDivs.removeClass('selected')
-    $(this).addClass('selected')
-
     this.props.handleLink(link)
-
   }
 
   componentWillMount () {
@@ -43,25 +37,21 @@ export default class SkillsRoute extends Component {
     const targetElement = $(`.sub-links a[data-href="${link}"]`)
 
     console.log(targetElement)
-
     console.log(link)
 
     let p1 = new Promise((resolve, reject) => {
       this.props.handleLink(link)
       targetElement.click()
       resolve("Success!")
+      self.setState({loading:false})
     })
 
     p1.then((success)=>{
     })
-    // .then((success)=>{
-    // 	this.props.triggerNextStep()
-    // })
+    this.props.triggerNextStep()
     .catch((err)=>{
     })
 
-    self.setState({loading:false})
-    this.props.triggerNextStep()
 
   }
 
@@ -76,13 +66,13 @@ export default class SkillsRoute extends Component {
   }
 }
 
-SkillsRoute.propTypes = {
+AboutRoute.propTypes = {
   steps: PropTypes.object,
   triggerNextStep: PropTypes.func,
   handleLink: PropTypes.func
 }
 
-SkillsRoute.defaultProps = {
+AboutRoute.defaultProps = {
   steps: undefined,
   triggerNextStep: undefined,
   handleLink: undefined

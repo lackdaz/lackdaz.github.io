@@ -11,6 +11,10 @@ main .main-container {
   text-align: justify;
 }
 
+main .main-container .rsc-ts-bubble{
+  text-align: center;
+}
+
 p {
   font-size: 24px;
   line-height: 1.5;

@@ -6,7 +6,12 @@ import ChatBot from '../chatbot/ChatBot'
 import menu from '../../menu'
 
 // custom chatbot components
-import SkillsRoute from '../../components/redirect/SkillsRoute'
+import AboutRoute from '../../components/redirect/AboutRoute'
+
+import TourAbout from '../../components/redirect/TourAbout'
+import TourSkills from '../../components/redirect/TourSkills'
+import TourCauses from '../../components/redirect/TourCauses'
+
 
 require('./Docs.css')
 
@@ -37,6 +42,7 @@ const Docs = (props) => {
                 floating={true}
                 handleLink={props.handleLink}
                 botAvatar={'avatar.png'}
+                botDelay={1500}
                 steps={[
                   {
                     id: '1',
@@ -51,8 +57,8 @@ const Docs = (props) => {
                   {
                     id: '3',
                     options: [
-                      { value: 'yes', label: 'Yes', trigger: 'tour' },
-                      { value: 'no', label: 'No', trigger: 'menu' },
+                      { value: 'yes', label: 'Why not?', trigger: 'tour' },
+                      { value: 'no', label: 'Perhaps next time', trigger: 'menu' },
                     ],
                   },
                   {
@@ -70,21 +76,111 @@ const Docs = (props) => {
                     ],
                   },
                   {
-                    id: 'story',
-                    component: <SkillsRoute />,
+                    id: 'tour',
+                    component: <TourAbout />,
                     waitAction: true,
                     replace: true,
                     asMessage: false,
-                    trigger: 'story1'
+                    trigger: 'tour1'
                   },
                   {
-                    id: 'story1',
-                    message: 'Once upon a time',
-                    trigger: 'story2'
+                    id: 'tour1',
+                    message: 'So this is my story of how I came to be a web developer',
+                    trigger: 'tour2'
                   },
                   {
-                    id: 'story2',
-                    message: 'In a land far, far away',
+                    id: 'tour2',
+                    message: 'I was a geek working on some hardware...',
+                    trigger: 'tour3'
+                  },
+                  {
+                    id: 'tour3',
+                    message: 'trying to get these things to connect to the web aka the Internet of Things',
+                    trigger: 'tour4'
+                  },
+                  {
+                    id: 'tour4',
+                    message: 'and I realised that there was a lot more I could do with it, like...',
+                    trigger: 'tour5'
+                  },
+                  {
+                    id: 'tour5',
+                    message: 'using natural language processing to give commands to my bot slaves...',
+                    trigger: 'tour6'
+                  },
+                  {
+                    id: 'tour6',
+                    message: 'or using a food image recognition algorithm to identify hot dogs',
+                    trigger: 'tour7'
+                  },
+                  {
+                    id: 'tour7',
+                    message: 'the possibilities were endless, so I decided to quit my dream job and sign up for the GA immersive.',
+                    trigger: 'tour-about-last'
+                  },
+                  {
+                    id: 'tour-about-last',
+                    message: 'You can read more here. Do tell me when to continue',
+                    trigger: 'tour-about-ans'
+                  },
+                  {
+                    id: 'tour-about-ans',
+                    options: [
+                      { value: 'yes', label: 'Go on', trigger: 'tour-causes-1' },
+                      { value: 'no', label: 'Stop', trigger: 'menu' },
+                    ],
+                  },
+                  {
+                    id: 'tour-causes-1',
+                    component: <TourCauses />,
+                    waitAction: true,
+                    replace: true,
+                    asMessage: false,
+                    trigger: 'tour-causes-2'
+                  },
+                  {
+                    id: 'tour-causes-2',
+                    message: 'I\'m passionate about the open-source movement, the maker community and environmental sustainability',
+                    trigger: 'tour-causes-3'
+                  },
+                  {
+                    id: 'tour-causes-3',
+                    message: 'I teach beginners open-source hardware for free and look to ',
+                    trigger: 'tour-causes-4'
+                  },
+                  {
+                    id: 'tour-causes-last',
+                    message: 'You can read more here. Do tell me when to continue',
+                    trigger: 'tour-about-ans'
+                  },
+                  {
+                    id: 'tour-about-ans',
+                    options: [
+                      { value: 'yes', label: 'Go on', trigger: 'tour-skills-1' },
+                      { value: 'no', label: 'Stop', trigger: 'menu' },
+                    ],
+                  },
+                  {
+                    id: 'tour-skills-1',
+                    component: <TourSkills />,
+                    waitAction: true,
+                    replace: true,
+                    asMessage: false,
+                    trigger: 'tour-skills-2'
+                  },
+                  {
+                    id: 'tour-skills-2',
+                    message: 'I try to keep knives sharp',
+                    trigger: 'tour-skills-3'
+                  },
+                  {
+                    id: 'tour-skills-3',
+                    message: 'Listed are my coding chops and creative skillsets',
+                    trigger: 'tour-skills-4'
+                  },
+                  {
+                    id: 'tour-skills-4',
+                    message: 'I try to keep knives sharp',
                     trigger: 'end'
                   },
                   {

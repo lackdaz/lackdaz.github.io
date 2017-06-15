@@ -4,7 +4,7 @@ const helloWorldCode =
 `import React from 'react';
 // Intro pages
 import Installation from './components/docs/pages/intro/Installation';
-import HelloWorld from './components/docs/pages/intro/HelloWorld';
+import Causes from './components/docs/pages/intro/Causes';
 
 const menu = {
   title: 'REACT SPA Boilerplate',
@@ -28,7 +28,7 @@ const menu = {
         {
           href: '/docs/hello-world',
           title: 'Hello World',
-          component: <HelloWorld/>,
+          component: <Causes/>,
         },
       ],
     },
@@ -39,7 +39,7 @@ const menu = {
 export default menu;
 `;
 
-const HelloWorld = () => (
+const Causes = () => (
   <div className='docs-installation'>
     <p>
       Over the years, both work and leisure has brought me on many overseas adventures. I've backpacked across Central and Eastern Europe on a number of occasions, worked in Laos, stayed for an extended period of time in Utrecht. During a week-long flight delay while on a work trip to China, I programmed a POS / SOA automation script with VBA.
@@ -51,4 +51,4 @@ const HelloWorld = () => (
   </div>
 );
 
-export default HelloWorld;
+export default Causes;

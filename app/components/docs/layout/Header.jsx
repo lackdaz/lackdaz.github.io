@@ -5,6 +5,7 @@ const Header = props => (
   <div className="header">
     <h1 className="title">{props.title}</h1>
     <p className="description">{props.description}</p>
+    
   </div>
 );
 

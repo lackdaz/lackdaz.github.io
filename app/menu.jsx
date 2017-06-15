@@ -2,7 +2,7 @@ import React from 'react';
 // Intro
 import Intro from './components/docs/pages/intro/Intro';
 import About from './components/docs/pages/intro/About';
-import HelloWorld from './components/docs/pages/intro/HelloWorld';
+import Causes from './components/docs/pages/intro/Causes';
 // Examples
 import Project1 from './components/docs/pages/examples/Project1';
 import Project2 from './components/docs/pages/examples/Project2';
@@ -21,7 +21,7 @@ const menu = {
   title: 'Hello! I\'m Seth',
   description: 'A web developer, maker and facilitator living in Singapore',
   homeLink: '/',
-  docsLink: '/about',
+  docsLink: '/intro',
   github: {
     user: 'lackdaz',
     repository: 'lackdaz.github.io',
@@ -34,7 +34,7 @@ const menu = {
         {
           href: '/intro',
           title: 'Introduction',
-          description: '"What I do not create, I do not yet understand" - Richard Feynman',
+          description: '',
           component: <Intro />,
         },
         {
@@ -45,8 +45,8 @@ const menu = {
         },
         {
           href: '/causes',
-          title: 'Hello World',
-          component: <HelloWorld />,
+          title: 'Causes I Support',
+          component: <Causes />,
         },
       ],
     },
@@ -62,6 +62,7 @@ const menu = {
         {
           href: '/portfolio/project2',
           title: 'Thingies',
+          description: 'where RFID meets IoT',
           component: <Project2 />,
         },
         {
@@ -72,6 +73,7 @@ const menu = {
         {
           href: '/portfolio/project4',
           title: 'Sentiment Chatbot',
+          description: 'Chatbots that can empathise',
           component: <Project4 />,
         },
       ],
