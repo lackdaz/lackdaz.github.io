@@ -22,16 +22,16 @@ const About = () => (
       As the manager of a makerspace, I became attuned to modern fabrication tools like 3D printers, CNC and laser cutting (some of these I now own) and their maintenance (I've changed 40,000V step-up power supplies - <i>multiple</i> times). It was also during this time as well that I picked up traditional craftsmen trades like woodworking, leatherworking and innovated on arguably <i>useful</i> inventions like a "Motion-sensing Pet Robot", "A 3-axis Spinning LED Light Ball" and a "$10 EMP jammer". It was what many folks would call a "dream job".
       <br></br>
       <br></br>
-      But alas, as I traipsed from the world of hardware into the Internet of Things (IoT), ostensibly to create useful applications of the technology - There were bits of code so deeply profound that it troubled me for nights on end and lured me deeper into this bottomless dimension. I took the plunge, left my dream job and signed up for the GA Web Immersive in the hopes of understanding the tech stacks behind these little bits of hardware.
+      But alas, as I traipsed from the world of hardware into the Internet of Things (IoT), ostensibly to create useful applications of the technology - There were bits of code so deeply profound that it troubled me for nights on end and lured me deeper into this bottomless dimension. I took the plunge, left my dream job and signed up for the GA Web Immersive in the hopes of understanding the tech stacks behind these little bits of hardware. So here I am!
       <br></br>
       <br></br>
-      Ever since, I've programmed web solutions with the toolkits that both GA and the internet have provided. Most of the time,
-
-      Over the years, both work and leisure has brought me on many overseas adventures. I've backpacked across Central and Eastern Europe on a number of occasions, worked in Laos, stayed for an extended period of time in Utrecht. During a week-long flight delay while on a work trip to China, I programmed a POS / SOA automation script with VBA.
-
-      After meeting my partner Cleavan, we celebrated our graduation with a road trip from D.C. to Key West (2,414 miles round-trip) and I now spend my December breaks visiting the folks in Oregon, USA.
-
-      After leaving my last job,
+      Over the years, both work and leisure has brought me on many overseas adventures. I've backpacked across Central and Eastern Europe and worked among locals in Laos. I have an affinity for new cultures, and... delayed baggage - travel insurance beware! During a week-long flight delay while on a work trip to China, I programmed a POS / SOA automation script with VBA to automate my sales and accounting processes and haven't looked back ever since.
+      <br></br>
+      <br></br>
+      After meeting my partner Cleavan, we celebrated our graduation with a road trip from D.C. to Key West (a 2,414-mile round-trip) and I now spend my December breaks visiting her folks in Oregon, USA.
+      <br></br>
+      <br></br>
+      I have no pets but a 177 year old sourdough starter.
     </p>
   </div>
 )
