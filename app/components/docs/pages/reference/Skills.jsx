@@ -283,7 +283,7 @@ const Skills = () => (
               <li key={prop.name}>
                 <div className='blocks'>
                   <a href={href}>
-                    { {icon}.length > 1 ? <i className={`${icon} float`} /> : <img src={`${name}.png`} className='levitate'/> }
+                    { {icon}.length > 1 ? <i className={`${icon} float`} /> : <img src={`${name}.png`} className='levitate' /> }
                     <div className='header'>
                       <p>{name}</p>
                     </div>
@@ -332,6 +332,11 @@ const Skills = () => (
           })
         }
       </ul>
+      <p className='skills-center'>
+        You can find my CV
+        <a href='http://bit.ly/hireseth'><strong><u> here</u></strong></a>
+      </p>
+
     </div>
   </div>
 )

@@ -24,6 +24,10 @@ const Contact = () => (
     <p className='tagline'>
       I am on the lookout for opportunities, let's chat!
     </p>
+    <p className='tagline'>
+      You can find my CV
+      <a href='http://bit.ly/hireseth'><strong><u> here</u></strong></a>
+    </p>
   </div>
 );
 

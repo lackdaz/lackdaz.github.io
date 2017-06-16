@@ -44,6 +44,10 @@
   font-size: 2em;
 }
 
+.skills-center {
+  text-align: center;
+}
+
 @keyframes float {
 	0% {
 		box-shadow: 0 15px 5px 0px rgba(0,0,0,0.6);
