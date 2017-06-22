@@ -29,8 +29,9 @@ module.exports = {
         }
       }),
     new webpack.optimize.UglifyJsPlugin({
+      minimize: true,      
       compress:{
-        warnings: true
+        warnings: true,
         }
       }),
     new CopyWebpackPlugin([
