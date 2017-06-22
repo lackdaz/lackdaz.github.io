@@ -16,7 +16,7 @@ const About = () => (
       I'm a zealous reader of the New York Times, and it has served as the main source of inspiration for this webpage which I look to showcase my work, blog and share about social causes.
     </p>
     <p>
-      I wanted to make this a fun experience, so as you might have noticed that flashing button at bottom right of the screen, I've coded up a chatbot to walk you through this journey, unimaginatively named "Proto-Seth". Be nice to him.
+      I wanted to make this a fun experience, so as you might have noticed that flashing button at bottom right of the screen, I've coded up a chatbot to walk you through this journey, and unimaginatively named "Proto-Seth". Be nice to him.
     </p>
 
       <br></br>
