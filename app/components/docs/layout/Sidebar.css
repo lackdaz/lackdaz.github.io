@@ -30,7 +30,7 @@
 }
 
 .float{
-  width: 15vw;
+  width: 20vw;
 }
 
 .sidebar .sidebar-header {
@@ -114,7 +114,7 @@
 
 .sidebar-links div.selected ul.sub-links {
 	max-height: 30vh;
-	padding: 0 0 0 4vw;
+	padding: 0 0 0 2.5vw;
 }
 
 .sidebar-links div .sub-links a {
@@ -208,10 +208,6 @@
   .sidebar.opened {
     transform: translateX(0);
   }
-
-  /*.sidebar.opened.float{
-    width: 75%;
-  }*/
 
   .sidebar .sidebar-close-button {
     display: block;
