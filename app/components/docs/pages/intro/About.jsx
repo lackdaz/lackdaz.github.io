@@ -9,6 +9,12 @@ npm start
 
 const About = () => (
   <div className='docs-installation'>
+    <blockquote>
+      <p>
+        "What I do not create, I do not yet understand" <br></br>
+        - Richard Feynman
+      </p>
+    </blockquote>
     <p>
       My name is Seth Loh Wei Chen and I’m a full-stack web developer graduate from the General Assembly Web Development Immersive. I grew up in Singapore and graduated with a B.Soc.Sci.(Hons) in Economics from the National University of Singapore (NUS) and had worked previous stints as a data analyst, product development and logistics.
     </p>

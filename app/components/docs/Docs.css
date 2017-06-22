@@ -9,7 +9,7 @@ main {
   transition:width 300ms ease-in-out, height 300ms ease-in-out;
 }
 
-.opened{
+main.opened{
   margin-left: 15vw;
   padding: 10vh 10vw;
   padding-right: 30vw;
@@ -26,7 +26,7 @@ main .main-container .rsc-ts-bubble {
 }
 
 p {
-  font-size: 24px;
+  font-size: 3vh;
   line-height: 1.5;
 }
 

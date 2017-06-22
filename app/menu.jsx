@@ -39,7 +39,7 @@ const menu = {
         {
           href: '/about',
           title: 'My Story',
-          description: '"What I do not create, I do not yet understand" - Richard Feynman',
+          description: '',
           component: <About />,
         },
         {
