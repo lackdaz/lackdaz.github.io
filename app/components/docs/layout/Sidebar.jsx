@@ -139,9 +139,10 @@ class Sidebar extends Component {
               })
             }
           </ul>
-
-          <div className='sidebar-links'>
-            {_.map(menu.sections, this.renderSection)}
+          <div className='links-container'>
+            <div className='sidebar-links'>
+              {_.map(menu.sections, this.renderSection)}
+            </div>
           </div>
           <div>
             <p className="credits">Built with the<br></br>

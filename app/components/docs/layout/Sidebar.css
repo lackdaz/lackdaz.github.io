@@ -66,12 +66,16 @@
   padding: 16px;
 }
 
+.links-container {
+  margin: 0 auto;
+  padding: 0 2.5vw 0 5vw;
+}
+
 .sidebar-links div > a {
 	display: block;
 	text-decoration: none;
-	margin: 0 auto 5px auto;
-	/*padding: 10px 0 10px 5px;*/
-  padding: 5px 0 5px 20px;
+	/*margin: 0 auto 5px auto;*/
+  /*padding: 5px 0 5px 20px;*/
 	text-align: left;
   color: rgba(255, 255, 255, 0.6);
 	/*color:  #4a4a4a;*/
@@ -110,7 +114,7 @@
 
 .sidebar-links div.selected ul.sub-links {
 	max-height: 30vh;
-	padding: 0px 0 0px 60px;
+	padding: 0 0 0 4vw;
 }
 
 .sidebar-links div .sub-links a {
@@ -213,4 +217,8 @@
     display: block;
   }
 
+  .links-container {
+    margin: 0 auto;
+    padding: 0 2.5vw 0 30vw;
+  }
 }
