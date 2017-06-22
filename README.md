@@ -1,6 +1,6 @@
-# [sethloh](www.sethloh.com)
+# [sethloh](http://www.sethloh.com)
 
-[www.sethloh.com](www.sethloh.com)
+[www.sethloh.com](http://www.sethloh.com)
 
 This is my portfolio page created with a template created by dear friend and talented developer [LucasBassetti](https://github.com/LucasBassetti)
 
