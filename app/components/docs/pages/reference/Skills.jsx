@@ -274,7 +274,7 @@ const designSkills = [
 const Skills = () => (
   <div className='skills-container'>
     <div className='skills-current'>
-      <h3>I'm now learning</h3>
+      <h3 className="description">I'm now learning</h3>
       <ul className='horizontal-list'>
         {
           current.map((prop) => {
@@ -296,7 +296,7 @@ const Skills = () => (
       </ul>
     </div>
     <div className='skills-dev'>
-      <h3>Development</h3>
+      <h3 className="description">Development</h3>
       <ul className='horizontal-list'>
         {
           devSkills.map((prop) => {
@@ -316,7 +316,7 @@ const Skills = () => (
       </ul>
     </div>
     <div className='skills-design'>
-      <h3>Design</h3>
+      <h3 className="description">Design</h3>
       <ul className='horizontal-list'>
         {
           designSkills.map((prop) => {

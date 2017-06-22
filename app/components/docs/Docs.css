@@ -30,12 +30,27 @@ p {
   line-height: 1.5;
 }
 
+.docs .title {
+  font-size: 3vw;
+}
+
+.docs .description {
+  font-size: 2.4vw;
+}
+
 @media screen and (max-width: 765px) {
   main {
     margin: 0;
     padding: 24px;
   }
   p {
+    font-size: 4vw;
+  }
+  .docs .title {
     font-size: 5vw;
+  }
+
+  .docs .description {
+    font-size: 4.5vw;
   }
 }
