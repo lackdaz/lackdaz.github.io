@@ -9,6 +9,7 @@ const Home = (props) => {
   const githubUrl = `https://ghbtns.com/github-btn.html?user=${github.user}&repo=${github.repository}`;
   return (
     <div className="home">
+      <img src={'bg.png'} className="bg"></img>
       <h1 className="title">{title}</h1>
       <p className="description">{description}</p>
       <div className="buttons">
