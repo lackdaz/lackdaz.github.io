@@ -172,6 +172,13 @@
   padding: 0 0.75vw;
 }
 
+.sidebar .credits {
+  text-align: center;
+  font-size: 0.75em;
+  color: rgba(255, 255, 255, 0.6);
+  
+}
+
 @media screen and (max-width: 765px) {
   .sidebar-container {
     height: 56px;
@@ -205,4 +212,5 @@
   .sidebar .sidebar-close-button {
     display: block;
   }
+
 }

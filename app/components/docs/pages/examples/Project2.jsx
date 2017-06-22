@@ -5,7 +5,7 @@ require('./Example.css')
 const Example2 = () => (
   <div className="docs-example-2">
     <div className='resized'>
-      <a href='https://postalcsbot.herokuapp.com/'>
+      <a href='https://thingies.herokuapp.com/'>
         <img src='https://media.giphy.com/media/14kle7Gf1QzhwQ/giphy.gif' />
       </a>
     </div>

@@ -143,7 +143,15 @@ class Sidebar extends Component {
           <div className='sidebar-links'>
             {_.map(menu.sections, this.renderSection)}
           </div>
-
+          <div>
+            <p className="credits">Built with the<br></br>
+              <a href='https://github.com/LucasBassetti/react-spa-boilerplate'>
+                <strong>
+                  <u>react-spa-boilerplate</u>
+                </strong>
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     )
