@@ -53,8 +53,9 @@ const Docs = (props) => {
                 floating
                 handleLink={props.handleLink}
                 toggleFloating={props.toggleFloating}
+                hideUserAvatar
                 botAvatar={'avatar.png'}
-                botDelay={1800}
+                botDelay={2500}
                 customDelay={100}
                 opened={props.opened}
                 steps={[
@@ -83,6 +84,7 @@ const Docs = (props) => {
                   {
                     id: 'menuInput',
                     options: [
+                                        { value: 'nil', label: 'Tour', trigger: 'tour' },
                                         { value: '/about', label: 'Story', trigger: 'story' },
                                         { value: '/causes', label: 'Causes', trigger: 'causes' },
                                         { value: '/portfolio/project4', label: 'Portfolio', trigger: 'portfolio' },

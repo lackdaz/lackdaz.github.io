@@ -176,7 +176,7 @@
   text-align: center;
   font-size: 0.75em;
   color: rgba(255, 255, 255, 0.6);
-  
+  padding: 8vh 0;
 }
 
 @media screen and (max-width: 765px) {
