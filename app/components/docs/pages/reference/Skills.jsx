@@ -10,6 +10,14 @@ const current = [
     href: 'https://www.tensorflow.org/',
     defaultValue: '',
     description: 'an open source software library for numerical computation using data flow graphs'
+  },
+  {
+    name: 'keras',
+    type: 'PropTypes.string',
+    icon: '',
+    href: 'https://www.keras.io/',
+    defaultValue: '',
+    description: 'Keras is a high-level neural networks API, written in Python and capable of running on top of either TensorFlow, CNTK or Theano'
   }
 ]
 
@@ -283,7 +291,8 @@ const Skills = () => (
               <li key={prop.name}>
                 <div className='blocks'>
                   <a href={href}>
-                    { {icon}.length > 1 ? <i className={`${icon} float`} /> : <img src={`${name}.png`} className='levitate' /> }
+                    { {icon}.length > 1 ? <div className='current-image-container'><i className={`${icon} float`} /></div> : <div className='current-image-container'><img src={`${name}.png`} className='levitate' /></div> }
+                    <div className='shadow'></div>
                     <div className='header'>
                       <p>{name}</p>
                     </div>
