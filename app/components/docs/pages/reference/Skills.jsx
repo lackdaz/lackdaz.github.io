@@ -18,7 +18,15 @@ const current = [
     href: 'https://www.keras.io/',
     defaultValue: '',
     description: 'Keras is a high-level neural networks API, written in Python and capable of running on top of either TensorFlow, CNTK or Theano'
-  }
+  },
+  {
+    name: 'elixir',
+    type: 'PropTypes.string',
+    icon: '',
+    href: 'https://elixir-lang.org',
+    defaultValue: '',
+    description: 'Elixir is a dynamic, functional language designed for building scalable and maintainable applications.'
+  },
 ]
 
 const devSkills = [
@@ -238,7 +246,7 @@ const designSkills = [
     description: ''
   },
   {
-    name: 'Fusion360',
+    name: 'fusion360',
     type: 'PropTypes.string',
     icon: 'fa fa-cubes',
     href: '',
@@ -246,7 +254,7 @@ const designSkills = [
     description: ''
   },
   {
-    name: 'Rhino',
+    name: 'rhino',
     type: 'PropTypes.string',
     icon: 'fa fa-cubes',
     href: '',
@@ -254,7 +262,7 @@ const designSkills = [
     description: ''
   },
   {
-    name: 'OnShape',
+    name: 'onShape',
     type: 'PropTypes.string',
     icon: 'fa fa-cubes',
     href: '',
@@ -262,7 +270,7 @@ const designSkills = [
     description: ''
   },
   {
-    name: 'Simplify3D',
+    name: 'simplify3D',
     type: 'PropTypes.string',
     icon: 'fa fa-cubes',
     href: '',

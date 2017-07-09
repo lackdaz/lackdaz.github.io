@@ -53,7 +53,7 @@
 		transform: translatey(0px);
 	}
 	50% {
-		transform: translatey(-20px);
+		transform: translatey(-10px);
 	}
 	100% {
 		transform: translatey(0px);
@@ -84,7 +84,7 @@
   width: 20%;
   border-radius: 100%;
   background-color: rgba(0,0,0,0.4);
-  animation: grow 3s ease-in-out infinite;
+  animation: grow 2s ease-in-out infinite;
 }
 
 img.levitate {
@@ -93,7 +93,7 @@ img.levitate {
 	overflow: hidden;
 	/*box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);*/
 	transform: translatey(0px);
-	animation: float 3s ease-in-out infinite;
+	animation: float 2s ease-in-out infinite;
   width: 90%;
   height: auto;
 }
