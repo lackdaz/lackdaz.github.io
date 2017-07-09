@@ -25,7 +25,15 @@ const current = [
     icon: '',
     href: 'https://elixir-lang.org',
     defaultValue: '',
-    description: 'Elixir is a dynamic, functional language designed for building scalable and maintainable applications.'
+    description: 'Elixir is a dynamic, functional language designed for building scalable and maintainable applications'
+  },
+  {
+    name: 'phoenix',
+    type: 'PropTypes.string',
+    icon: '',
+    href: 'http://www.phoenixframework.org/',
+    defaultValue: '',
+    description: 'Phoenix is a web development framework written in Elixir which implements the server-side MVC pattern'
   },
 ]
 
